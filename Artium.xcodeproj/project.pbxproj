@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B79FE7A923AD2D3101DB4134 /* Pods_Artium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6F7A91ACD865099AF3A396 /* Pods_Artium.framework */; };
 		F0803D842806FB96001A60BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0803D832806FB96001A60BE /* AppDelegate.swift */; };
 		F0803D882806FB96001A60BE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0803D872806FB96001A60BE /* HomeViewController.swift */; };
 		F0803D8B2806FB96001A60BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0803D892806FB96001A60BE /* Main.storyboard */; };
@@ -30,6 +31,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6F6F7A91ACD865099AF3A396 /* Pods_Artium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6BB4787E7F5C52DD164A001 /* Pods-Artium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artium.debug.xcconfig"; path = "Target Support Files/Pods-Artium/Pods-Artium.debug.xcconfig"; sourceTree = "<group>"; };
+		B379A28B42A956D8CF0A6BDB /* Pods-Artium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artium.release.xcconfig"; path = "Target Support Files/Pods-Artium/Pods-Artium.release.xcconfig"; sourceTree = "<group>"; };
 		F0803D802806FB96001A60BE /* Artium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0803D832806FB96001A60BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0803D872806FB96001A60BE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -59,17 +63,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B79FE7A923AD2D3101DB4134 /* Pods_Artium.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08B5EF9FCA6A18D7F9CEDF70 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6F6F7A91ACD865099AF3A396 /* Pods_Artium.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1564C0EA09C0160E91BFB597 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A6BB4787E7F5C52DD164A001 /* Pods-Artium.debug.xcconfig */,
+				B379A28B42A956D8CF0A6BDB /* Pods-Artium.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F0803D772806FB96001A60BE = {
 			isa = PBXGroup;
 			children = (
 				F0803D822806FB96001A60BE /* Artium */,
 				F0803D812806FB96001A60BE /* Products */,
+				1564C0EA09C0160E91BFB597 /* Pods */,
+				08B5EF9FCA6A18D7F9CEDF70 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -196,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F0803D942806FB99001A60BE /* Build configuration list for PBXNativeTarget "Artium" */;
 			buildPhases = (
+				90A8314D1A1E2C27C7085301 /* [CP] Check Pods Manifest.lock */,
 				F0803D7C2806FB96001A60BE /* Sources */,
 				F0803D7D2806FB96001A60BE /* Frameworks */,
 				F0803D7E2806FB96001A60BE /* Resources */,
+				A05DABC7C381D6ACCDA8E3C2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -254,6 +281,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		90A8314D1A1E2C27C7085301 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Artium-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A05DABC7C381D6ACCDA8E3C2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Artium/Pods-Artium-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Artium/Pods-Artium-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Artium/Pods-Artium-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F0803D7C2806FB96001A60BE /* Sources */ = {
@@ -420,6 +489,7 @@
 		};
 		F0803D952806FB99001A60BE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A6BB4787E7F5C52DD164A001 /* Pods-Artium.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -447,6 +517,7 @@
 		};
 		F0803D962806FB99001A60BE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B379A28B42A956D8CF0A6BDB /* Pods-Artium.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

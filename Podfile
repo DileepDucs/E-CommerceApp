@@ -6,5 +6,7 @@ target 'Artium' do
   use_frameworks!
 
   # Pods for Artium
+  pod 'RealmSwift'
+  pod 'SDWebImage'
 
 end
