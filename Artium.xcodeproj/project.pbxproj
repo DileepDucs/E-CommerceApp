@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F0803D842806FB96001A60BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0803D832806FB96001A60BE /* AppDelegate.swift */; };
-		F0803D862806FB96001A60BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0803D852806FB96001A60BE /* SceneDelegate.swift */; };
 		F0803D882806FB96001A60BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0803D872806FB96001A60BE /* ViewController.swift */; };
 		F0803D8B2806FB96001A60BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0803D892806FB96001A60BE /* Main.storyboard */; };
 		F0803D8D2806FB99001A60BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0803D8C2806FB99001A60BE /* Assets.xcassets */; };
@@ -26,7 +25,6 @@
 /* Begin PBXFileReference section */
 		F0803D802806FB96001A60BE /* Artium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0803D832806FB96001A60BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F0803D852806FB96001A60BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F0803D872806FB96001A60BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F0803D8A2806FB96001A60BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F0803D8C2806FB99001A60BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,7 +73,6 @@
 				F0803DAA28070430001A60BE /* Resources */,
 				F0803D972806FBF5001A60BE /* Network */,
 				F0803D832806FB96001A60BE /* AppDelegate.swift */,
-				F0803D852806FB96001A60BE /* SceneDelegate.swift */,
 				F0803D872806FB96001A60BE /* ViewController.swift */,
 				F0803D892806FB96001A60BE /* Main.storyboard */,
 				F0803D8C2806FB99001A60BE /* Assets.xcassets */,
@@ -204,7 +201,6 @@
 				F0803DA62806FBF5001A60BE /* NetworkManagerProtocol.swift in Sources */,
 				F0803DA82806FBF5001A60BE /* NetworkConstant.swift in Sources */,
 				F0803DA92806FBF5001A60BE /* NetworkError.swift in Sources */,
-				F0803D862806FB96001A60BE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
