@@ -10,6 +10,10 @@ import Foundation
 struct NetworkConstant {
     
     struct Search {
-        static let url =  "https://api.github.com/"
+        static let url =  ""
+    }
+    
+    struct Product {
+        static let url =  "https://fakestoreapi.com/"
     }
 }
