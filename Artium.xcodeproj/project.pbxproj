@@ -27,7 +27,7 @@
 		F0803D832806FB96001A60BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0803D872806FB96001A60BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F0803D8A2806FB96001A60BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		F0803D8C2806FB99001A60BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F0803D8C2806FB99001A60BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		F0803D8F2806FB99001A60BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0803D912806FB99001A60BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F0803D992806FBF5001A60BE /* NetworkConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
@@ -70,12 +70,11 @@
 		F0803D822806FB96001A60BE /* Artium */ = {
 			isa = PBXGroup;
 			children = (
+				F0803DCE28071801001A60BE /* Common */,
 				F0803DAA28070430001A60BE /* Resources */,
 				F0803D972806FBF5001A60BE /* Network */,
-				F0803D832806FB96001A60BE /* AppDelegate.swift */,
 				F0803D872806FB96001A60BE /* ViewController.swift */,
 				F0803D892806FB96001A60BE /* Main.storyboard */,
-				F0803D8C2806FB99001A60BE /* Assets.xcassets */,
 				F0803D8E2806FB99001A60BE /* LaunchScreen.storyboard */,
 				F0803D912806FB99001A60BE /* Info.plist */,
 			);
@@ -116,8 +115,17 @@
 		F0803DAA28070430001A60BE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F0803D8C2806FB99001A60BE /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		F0803DCE28071801001A60BE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				F0803D832806FB96001A60BE /* AppDelegate.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
