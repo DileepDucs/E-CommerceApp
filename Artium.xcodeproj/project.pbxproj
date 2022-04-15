@@ -108,10 +108,7 @@
 		F05E17C928091A5B00D68843 /* HorizontalTray */ = {
 			isa = PBXGroup;
 			children = (
-				F05E17CE28093DF000D68843 /* HorizontalTray.swift */,
-				F05E17D028093E7400D68843 /* HorizontalTray.xib */,
-				F05E17D228093EE900D68843 /* HorizontalCell.swift */,
-				F05E17D328093EE900D68843 /* HorizontalCell.xib */,
+				F0A35F5B280958AE00FC0EF0 /* View */,
 			);
 			path = HorizontalTray;
 			sourceTree = "<group>";
@@ -242,6 +239,17 @@
 				F0803DE128073961001A60BE /* Product.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		F0A35F5B280958AE00FC0EF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F05E17CE28093DF000D68843 /* HorizontalTray.swift */,
+				F05E17D028093E7400D68843 /* HorizontalTray.xib */,
+				F05E17D228093EE900D68843 /* HorizontalCell.swift */,
+				F05E17D328093EE900D68843 /* HorizontalCell.xib */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
