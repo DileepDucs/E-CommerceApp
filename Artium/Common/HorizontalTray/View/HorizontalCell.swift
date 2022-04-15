@@ -8,10 +8,15 @@
 import UIKit
 
 class HorizontalCell: UICollectionViewCell {
-
+    
+    @IBOutlet weak var categoryLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+    }
+    
+    func configureCellWith(value: String) {
+        categoryLabel.text = value
+        categoryLabel.textColor = .white
     }
 
 }

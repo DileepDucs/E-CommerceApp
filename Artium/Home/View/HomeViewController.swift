@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     
     @IBOutlet weak var horizontalTray: HorizontalTray!
+    @IBOutlet weak var verticalTray: VerticalTray!
     
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar(frame: CGRect(x: 0, y: 10, width: Utility.screenWidth - 30, height: 40))
@@ -24,7 +25,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         viewModel.delegate = self
-        viewModel.getProductList()
+        //viewModel.getProductList()
     }
     
     override func viewWillAppear(_ animated: Bool) {

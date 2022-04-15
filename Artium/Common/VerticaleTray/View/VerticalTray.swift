@@ -1,5 +1,5 @@
 //
-//  HorizontalTray.swift
+//  VerticalTray.swift
 //  Artium
 //
 //  Created by Dileep Jaiswal on 15/04/22.
@@ -8,11 +8,11 @@
 import UIKit
 
 @IBDesignable
-class HorizontalTray: UIView {
+class VerticalTray: UIView {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
-    var categoryViewModel = CategoryViewModel()
+    var viewModel = ProductViewModel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,7 +26,7 @@ class HorizontalTray: UIView {
     
     private func commonInit() {
         let bundle = Bundle(for: type(of: self))
-        bundle.loadNibNamed("HorizontalTray", owner: self, options: nil)
+        bundle.loadNibNamed("VerticalTray", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -35,41 +35,41 @@ class HorizontalTray: UIView {
     }
     
     private func initCollectionView() {
-        let nib = UINib(nibName: "HorizontalCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "HorizontalCell")
+        let nib = UINib(nibName: "VerticalCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "VerticalCell")
         collectionView.dataSource = self
-        categoryViewModel.delegate = self
         DispatchQueue.main.async {
             ActivityIndicator.start()
         }
-        categoryViewModel.getCategoryList()
+        viewModel.delegate = self
+        viewModel.getProductList()
     }
 }
 
-extension HorizontalTray: UICollectionViewDataSource {
+extension VerticalTray: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categoryViewModel.count
+        return viewModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HorizontalCell", for: indexPath) as? HorizontalCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "VerticalCell", for: indexPath) as? VerticalCell else {
             fatalError("can't dequeue CustomCell")
         }
-        let category = categoryViewModel.getCategory(index: indexPath.row)
-        cell.configureCellWith(value: category.uppercased())
+        let product = viewModel.getProduct(index: indexPath.row)
+        cell.configureCellWith(product: product)
         return cell
     }
 }
 
-extension HorizontalTray: CategoryViewModelDelegate {
-    func loadCategorySuccessfully() {
+extension VerticalTray: ProductViewModelDelegate {
+    func loadProductSuccessfully() {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
             ActivityIndicator.stop()
         }
     }
     
-    func failedToLoadCategory(error: NetworkError) {
+    func failedToLoadProductList(error: NetworkError) {
         
     }
 }

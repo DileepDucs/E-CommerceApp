@@ -24,18 +24,27 @@
                                     <constraint firstAttribute="height" constant="60" id="GKN-X9-iHz"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awN-yo-eNZ" customClass="VerticalTray" customModule="Artium" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="127" width="414" height="735"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="8ga-24-n6U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Zt-qy-GnA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="awN-yo-eNZ" secondAttribute="trailing" id="CIS-H3-Yp8"/>
                             <constraint firstItem="8ga-24-n6U" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="67" id="Dd4-o6-Rv1"/>
+                            <constraint firstItem="awN-yo-eNZ" firstAttribute="top" secondItem="8ga-24-n6U" secondAttribute="bottom" id="Fxl-sc-Wkt"/>
+                            <constraint firstItem="awN-yo-eNZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jem-Tp-Qpq"/>
                             <constraint firstItem="8ga-24-n6U" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xe7-cP-2Ki"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="awN-yo-eNZ" secondAttribute="bottom" id="nEp-Kn-SUB"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8yO-60-5pw"/>
                     <connections>
                         <outlet property="horizontalTray" destination="8ga-24-n6U" id="iHe-Ul-fAn"/>
+                        <outlet property="verticalTray" destination="awN-yo-eNZ" id="HjV-CI-nU9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -64,6 +73,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
