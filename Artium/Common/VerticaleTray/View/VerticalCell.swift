@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import SDWebImage
 
 class VerticalCell: UICollectionViewCell {
 
+    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     override func awakeFromNib() {
@@ -17,9 +19,9 @@ class VerticalCell: UICollectionViewCell {
     }
     
     func configureCellWith(product: Product) {
+        imageView.sd_setImage(with: URL(string: product.image ?? ""), placeholderImage: UIImage(named: ""))
         nameLabel.text = product.title
         categoryLabel.text = product.category?.capitalized
-        self.backgroundColor = .orange
     }
 
 }
