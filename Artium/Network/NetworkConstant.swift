@@ -13,7 +13,7 @@ struct NetworkConstant {
         static let url =  ""
     }
     
-    struct Product {
+    struct ProductBase {
         static let url =  "https://fakestoreapi.com/"
     }
 }

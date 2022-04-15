@@ -7,19 +7,14 @@
 
 import Foundation
 
-class Product: Object, Decodable {
+struct Product: Codable {
+    var id: Int = 0
+    var title: String? = nil
+    var price: Double = 0
+    var description: String? = nil
+    var category: String? = nil
+    var image: String? = nil
     
-    // MARK: - Properties
-    @objc dynamic var id: Int = 0
-    @objc dynamic var title: String? = nil
-    @objc dynamic var price: String? = nil
-    @objc dynamic var description: String? = nil
-    @objc dynamic var category: String? = nil
-    @objc dynamic var image: String? = nil
-    
-    override class func primaryKey() -> String? {
-        return "id"
-    }
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -30,14 +25,14 @@ class Product: Object, Decodable {
         case image
     }
     
-    required convenience init(from decoder: Decoder) throws {
-        self.init()
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        id = try container.decode(Int.self, forKey: .id)
-        title = try? container.decode(String.self, forKey: .title)
-        price = try? container.decode(String.self, forKey: .price)
-        description = try? container.decode(String.self, forKey: .description)
-        category = try? container.decode(String.self, forKey: .category)
-        image = try? container.decode(String.self, forKey: .image)
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        id = try values.decode(Int.self, forKey: .id)
+        title = try values.decode(String.self, forKey: .title)
+        price = try values.decode(Double.self, forKey: .price)
+        description = try values.decode(String.self, forKey: .description)
+        category = try values.decode(String.self, forKey: .category)
+        image = try values.decode(String.self, forKey: .image)
     }
 }
+

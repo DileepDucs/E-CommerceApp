@@ -9,8 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
-    @IBOutlet weak var categoryCollectionView: UICollectionView!
-    @IBOutlet weak var productCollectionView: UICollectionView!
+    @IBOutlet weak var horizontalTray: HorizontalTray!
     
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar(frame: CGRect(x: 0, y: 10, width: Utility.screenWidth - 30, height: 40))
@@ -19,15 +18,18 @@ class HomeViewController: UIViewController {
         return searchBar
     }()
     
+    var viewModel = HomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
+        viewModel.delegate = self
+        //viewModel.getProductList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
-        //tableView.reloadData()
     }
     
     private func setupNavigationBar() {
@@ -47,3 +49,14 @@ extension HomeViewController: UISearchBarDelegate {
     }
 }
 
+
+extension HomeViewController: HomeViewModelDelegate {
+    func loadProductSuccessfully() {
+        
+    }
+    
+    func failedToLoadProductList(error: NetworkError) {
+        
+    }
+
+}

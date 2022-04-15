@@ -10,8 +10,8 @@ import Foundation
 
 // MARK: - SearchViewModelDelegate protocol
 protocol HomeViewModelDelegate {
-    func githubSearchSuccessfully()
-    func githubSearchFailure()
+    func loadProductSuccessfully()
+    func failedToLoadProductList(error: NetworkError)
 }
 
 class HomeViewModel {
@@ -19,64 +19,44 @@ class HomeViewModel {
     // MARK: - Properties
     var delegate: HomeViewModelDelegate?
     var apiClient = APIClient()
-    var searchItems = [SearchItem]()
+    var productItems = [Product]()
+    
+    // Product:-
     
     func getProductList() {
-        let apiData = ProductRequest.getProductList
-        apiClient.fetch(request: apiData, basePath: NetworkConstant.Product.url, success: { (data, result) in
-            self.parse(dataResponse: data)
-        }) { (data, result, error) in
-            print("Error", error.localizedDescription)
-            self.delegate?.githubSearchFailure()
+        let productRequest = ProductRequest.getProductList
+        apiClient.fetch(request: productRequest, basePath: NetworkConstant.ProductBase.url, keyDecodingStrategy: .useDefaultKeys) { (result: Result<[Product], NetworkError>) in
+            switch result {
+            case .success(let list):
+                self.productItems = list
+                self.delegate?.loadProductSuccessfully()
+            case .failure(let error):
+                self.delegate?.failedToLoadProductList(error: error)
+            }
         }
     }
     
+    // This var retun the product items count
+    func productCount() -> Int  {
+        return self.productItems.count
+    }
+    
+    // This function retturn product object for the given index.
+    func getProduct(index: Int) -> Product{
+        return productItems[index]
+    }
+    
+    
     func getCategoryList() {
-        let apiData = CategoryRequest.getProductCategories
-        apiClient.fetch(request: apiData, basePath: NetworkConstant.Search.url, success: { (data, result) in
-            self.parse(dataResponse: data)
-        }) { (data, result, error) in
-            print("Error", error.localizedDescription)
-            self.delegate?.githubSearchFailure()
+        let categoryRequest = CategoryRequest.getProductCategories
+        apiClient.fetch(request: categoryRequest, basePath: NetworkConstant.ProductBase.url, keyDecodingStrategy: .useDefaultKeys) { (result: Result<[String], NetworkError>) in
+            switch result {
+            case .success(let list):
+                print("\(list) unread messages.")
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
         }
     }
         
-    // This function will fetch list of items on the search of name
-    func fetchSearchList(name: String) {
-        let apiData = SearchRequest.searchByName(name)
-        apiClient.fetch(request: apiData, basePath: NetworkConstant.Search.url, success: { (data, result) in
-            self.parse(dataResponse: data)
-        }) { (data, result, error) in
-            print("Error", error.localizedDescription)
-            self.delegate?.githubSearchFailure()
-        }
-    }
-    
-    // This func parse jsn response from the server and store items in variables.
-    func parse(dataResponse: Data) {
-        do {
-            //here dataResponse received from a network request
-            let decoder = JSONDecoder()
-            let githubSearch = try decoder.decode(GithubSearch.self, from: dataResponse)
-            searchItems.removeAll()
-            if let items = githubSearch.items {
-                searchItems = items
-            }
-            self.delegate?.githubSearchSuccessfully()
-        } catch let parsingError {
-            print("Error", parsingError)
-            self.delegate?.githubSearchFailure()
-        }
-    }
-    
-    
-    // This function retun the search items count
-    func searchListCount() -> Int {
-        return searchItems.count
-    }
-    
-    // This function retturn search object for the given index.
-    func getSearchItemWith(index: Int) -> SearchItem {
-        return searchItems[index]
-    }
 }

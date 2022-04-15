@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		B79FE7A923AD2D3101DB4134 /* Pods_Artium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6F7A91ACD865099AF3A396 /* Pods_Artium.framework */; };
+		F001E4852807CB7800C7482D /* HomeServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001E4842807CB7800C7482D /* HomeServiceManager.swift */; };
+		F05E17CF28093DF000D68843 /* HorizontalTray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05E17CE28093DF000D68843 /* HorizontalTray.swift */; };
+		F05E17D128093E7400D68843 /* HorizontalTray.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05E17D028093E7400D68843 /* HorizontalTray.xib */; };
+		F05E17D428093EE900D68843 /* HorizontalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05E17D228093EE900D68843 /* HorizontalCell.swift */; };
+		F05E17D528093EE900D68843 /* HorizontalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05E17D328093EE900D68843 /* HorizontalCell.xib */; };
 		F0803D842806FB96001A60BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0803D832806FB96001A60BE /* AppDelegate.swift */; };
 		F0803D882806FB96001A60BE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0803D872806FB96001A60BE /* HomeViewController.swift */; };
 		F0803D8B2806FB96001A60BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0803D892806FB96001A60BE /* Main.storyboard */; };
@@ -34,6 +39,11 @@
 		6F6F7A91ACD865099AF3A396 /* Pods_Artium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6BB4787E7F5C52DD164A001 /* Pods-Artium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artium.debug.xcconfig"; path = "Target Support Files/Pods-Artium/Pods-Artium.debug.xcconfig"; sourceTree = "<group>"; };
 		B379A28B42A956D8CF0A6BDB /* Pods-Artium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artium.release.xcconfig"; path = "Target Support Files/Pods-Artium/Pods-Artium.release.xcconfig"; sourceTree = "<group>"; };
+		F001E4842807CB7800C7482D /* HomeServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceManager.swift; sourceTree = "<group>"; };
+		F05E17CE28093DF000D68843 /* HorizontalTray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalTray.swift; sourceTree = "<group>"; };
+		F05E17D028093E7400D68843 /* HorizontalTray.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalTray.xib; sourceTree = "<group>"; };
+		F05E17D228093EE900D68843 /* HorizontalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalCell.swift; sourceTree = "<group>"; };
+		F05E17D328093EE900D68843 /* HorizontalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalCell.xib; sourceTree = "<group>"; };
 		F0803D802806FB96001A60BE /* Artium.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Artium.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0803D832806FB96001A60BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0803D872806FB96001A60BE /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -84,8 +94,26 @@
 				A6BB4787E7F5C52DD164A001 /* Pods-Artium.debug.xcconfig */,
 				B379A28B42A956D8CF0A6BDB /* Pods-Artium.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F001E4832807CB5300C7482D /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				F001E4842807CB7800C7482D /* HomeServiceManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		F05E17C928091A5B00D68843 /* HorizontalTray */ = {
+			isa = PBXGroup;
+			children = (
+				F05E17CE28093DF000D68843 /* HorizontalTray.swift */,
+				F05E17D028093E7400D68843 /* HorizontalTray.xib */,
+				F05E17D228093EE900D68843 /* HorizontalCell.swift */,
+				F05E17D328093EE900D68843 /* HorizontalCell.xib */,
+			);
+			path = HorizontalTray;
 			sourceTree = "<group>";
 		};
 		F0803D772806FB96001A60BE = {
@@ -123,6 +151,7 @@
 		F0803D972806FBF5001A60BE /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				F001E4832807CB5300C7482D /* Helper */,
 				F0803D982806FBF5001A60BE /* Config */,
 				F0803D9A2806FBF5001A60BE /* APIClient.swift */,
 				F0803D9B2806FBF5001A60BE /* NetworkManager.swift */,
@@ -162,6 +191,7 @@
 		F0803DCE28071801001A60BE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F05E17C928091A5B00D68843 /* HorizontalTray */,
 				F0803DD128071872001A60BE /* Utility.swift */,
 				F0803DCF2807186A001A60BE /* ActivityIndicator.swift */,
 				F0803D832806FB96001A60BE /* AppDelegate.swift */,
@@ -275,6 +305,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0803D902806FB99001A60BE /* LaunchScreen.storyboard in Resources */,
+				F05E17D128093E7400D68843 /* HorizontalTray.xib in Resources */,
+				F05E17D528093EE900D68843 /* HorizontalCell.xib in Resources */,
 				F0803D8D2806FB99001A60BE /* Assets.xcassets in Resources */,
 				F0803D8B2806FB96001A60BE /* Main.storyboard in Resources */,
 			);
@@ -330,16 +362,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0803DA42806FBF5001A60BE /* NetworkManager.swift in Sources */,
+				F05E17CF28093DF000D68843 /* HorizontalTray.swift in Sources */,
 				F0803D882806FB96001A60BE /* HomeViewController.swift in Sources */,
 				F0803DA72806FBF5001A60BE /* EndPointType.swift in Sources */,
 				F0803D842806FB96001A60BE /* AppDelegate.swift in Sources */,
 				F0803DA22806FBF5001A60BE /* NetworkConfig.swift in Sources */,
 				F0803DE228073961001A60BE /* Product.swift in Sources */,
+				F001E4852807CB7800C7482D /* HomeServiceManager.swift in Sources */,
 				F0803DD02807186A001A60BE /* ActivityIndicator.swift in Sources */,
 				F0803DA32806FBF5001A60BE /* APIClient.swift in Sources */,
 				F0803DE028072350001A60BE /* CategoryRequest.swift in Sources */,
 				F0803DDE2807233C001A60BE /* ProductRequest.swift in Sources */,
 				F0803DA52806FBF5001A60BE /* APIClientProtocol.swift in Sources */,
+				F05E17D428093EE900D68843 /* HorizontalCell.swift in Sources */,
 				F0803DD828071F8A001A60BE /* HomeViewModel.swift in Sources */,
 				F0803DD228071872001A60BE /* Utility.swift in Sources */,
 				F0803DA62806FBF5001A60BE /* NetworkManagerProtocol.swift in Sources */,

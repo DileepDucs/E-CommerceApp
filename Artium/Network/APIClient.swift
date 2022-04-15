@@ -85,3 +85,20 @@ class APIClient: APIClientProtocol {
         }
     }
 }
+
+extension APIClient {
+    func getProductListwert() {
+        let apiData = ProductRequest.getProductList
+        fetch(request: apiData, basePath: NetworkConstant.ProductBase.url, success: { (data, result) in
+            do {
+                //here dataResponse received from a network request
+                let decoder = JSONDecoder()
+                let productList = try decoder.decode([Product].self, from: data)
+            } catch let parsingError {
+                print("Error", parsingError)
+            }
+        }) { (data, result, error) in
+            print("Error", error.localizedDescription)
+        }
+    }
+}
