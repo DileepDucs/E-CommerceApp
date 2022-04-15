@@ -18,14 +18,11 @@ class HomeViewController: UIViewController {
         searchBar.delegate = self
         return searchBar
     }()
-    
-    var viewModel = HomeViewModel()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-        viewModel.delegate = self
-        //viewModel.getProductList()
+        verticalTray.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,6 +33,12 @@ class HomeViewController: UIViewController {
     private func setupNavigationBar() {
         let navigationBar = UIBarButtonItem(customView: searchBar)
         navigationItem.leftBarButtonItem = navigationBar
+    }
+    
+    /// This function navigate to the search detail screen.
+    private func pushProductDetailsViewController() {
+        let detailViewController = ProductDetailVController()
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
 }
 
@@ -51,13 +54,10 @@ extension HomeViewController: UISearchBarDelegate {
 }
 
 
-extension HomeViewController: HomeViewModelDelegate {
-    func loadProductSuccessfully() {
-        
+extension HomeViewController: VerticalTrayDelegate {
+    func didSelectProductWith(product: Product) {
+        let detailViewController = ProductDetailVController()
+        detailViewController.product = product
+        navigationController?.pushViewController(detailViewController, animated: true)
     }
-    
-    func failedToLoadProductList(error: NetworkError) {
-        
-    }
-
 }

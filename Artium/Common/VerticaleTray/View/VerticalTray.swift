@@ -7,12 +7,17 @@
 
 import UIKit
 
+protocol VerticalTrayDelegate {
+    func didSelectProductWith(product: Product)
+}
+
 @IBDesignable
 class VerticalTray: UIView {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     var viewModel = ProductViewModel()
+    var delegate: VerticalTrayDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -82,6 +87,11 @@ extension VerticalTray: UICollectionViewDataSource, UICollectionViewDelegateFlow
         let product = viewModel.getProduct(index: indexPath.row)
         cell.configureCellWith(product: product)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let product = viewModel.getProduct(index: indexPath.row)
+        delegate?.didSelectProductWith(product: product)
     }
        
 }
