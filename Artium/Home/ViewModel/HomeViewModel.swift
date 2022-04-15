@@ -37,7 +37,7 @@ class HomeViewModel {
     }
     
     // This var retun the product items count
-    func productCount() -> Int  {
+    var count: Int  {
         return self.productItems.count
     }
     
@@ -45,18 +45,4 @@ class HomeViewModel {
     func getProduct(index: Int) -> Product{
         return productItems[index]
     }
-    
-    
-    func getCategoryList() {
-        let categoryRequest = CategoryRequest.getProductCategories
-        apiClient.fetch(request: categoryRequest, basePath: NetworkConstant.ProductBase.url, keyDecodingStrategy: .useDefaultKeys) { (result: Result<[String], NetworkError>) in
-            switch result {
-            case .success(let list):
-                print("\(list) unread messages.")
-            case .failure(let error):
-                print(error.localizedDescription)
-            }
-        }
-    }
-        
 }

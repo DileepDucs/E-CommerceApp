@@ -24,7 +24,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupNavigationBar()
         viewModel.delegate = self
-        //viewModel.getProductList()
+        viewModel.getProductList()
     }
     
     override func viewWillAppear(_ animated: Bool) {

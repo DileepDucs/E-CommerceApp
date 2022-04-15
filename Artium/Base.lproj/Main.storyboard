@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" restorationIdentifier="HorizontalTray" translatesAutoresizingMaskIntoConstraints="NO" id="8ga-24-n6U" customClass="HorizontalTray" customModule="Artium" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="67" width="414" height="70"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <rect key="frame" x="0.0" y="67" width="414" height="60"/>
+                                <color key="backgroundColor" systemColor="tintColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="uV4-Mm-LXC"/>
+                                    <constraint firstAttribute="height" constant="60" id="GKN-X9-iHz"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -65,8 +65,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
