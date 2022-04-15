@@ -43,10 +43,34 @@ class VerticalTray: UIView {
         }
         viewModel.delegate = self
         viewModel.getProductList()
+        //apply defined layout to collectionview
+        collectionView.collectionViewLayout = collectionViewLayout()
     }
+    
+    private func collectionViewLayout() -> UICollectionViewLayout {
+        //Define Layout here
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        
+        //Get device width
+        let width = UIScreen.main.bounds.width - 11
+        
+        //set section inset as per your requirement.
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 5, bottom: 2, right: 5)
+        
+        //set cell item size here
+        layout.itemSize = CGSize(width: width / 2, height: width / 1.7)
+        
+        //set Minimum spacing between 2 items
+        layout.minimumInteritemSpacing = 1
+        
+        //set minimum vertical line spacing here between two lines in collectionview
+        layout.minimumLineSpacing = 1
+        return layout
+    }
+    
 }
 
-extension VerticalTray: UICollectionViewDataSource {
+extension VerticalTray: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.count
     }
@@ -59,6 +83,7 @@ extension VerticalTray: UICollectionViewDataSource {
         cell.configureCellWith(product: product)
         return cell
     }
+       
 }
 
 extension VerticalTray: ProductViewModelDelegate {
