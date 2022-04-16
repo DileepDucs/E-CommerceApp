@@ -85,7 +85,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJh-ye-uoI">
                                 <rect key="frame" x="15" y="570" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.093669511377811432" green="0.56220537424087524" blue="0.14248323440551758" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VX3-KB-Ci1">
+                                <rect key="frame" x="15" y="577" width="384" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="13"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -95,6 +101,7 @@
                             <constraint firstItem="pkY-za-rhS" firstAttribute="top" secondItem="ks7-jV-o6b" secondAttribute="bottom" constant="20" id="3Y3-mw-pO9"/>
                             <constraint firstItem="014-OQ-kB6" firstAttribute="trailing" secondItem="pkY-za-rhS" secondAttribute="trailing" id="5ZT-PP-kOK"/>
                             <constraint firstItem="tNF-v6-VxJ" firstAttribute="trailing" secondItem="ks7-jV-o6b" secondAttribute="trailing" id="66R-Cx-i7M"/>
+                            <constraint firstItem="VX3-KB-Ci1" firstAttribute="top" secondItem="pJh-ye-uoI" secondAttribute="bottom" constant="7" id="LHi-15-RoY"/>
                             <constraint firstItem="tNF-v6-VxJ" firstAttribute="trailing" secondItem="bm1-l3-1y1" secondAttribute="trailing" constant="25" id="LUq-jc-wUt"/>
                             <constraint firstItem="pkY-za-rhS" firstAttribute="leading" secondItem="tNF-v6-VxJ" secondAttribute="leading" constant="15" id="NOx-WO-faI"/>
                             <constraint firstItem="014-OQ-kB6" firstAttribute="leading" secondItem="pkY-za-rhS" secondAttribute="leading" id="VZV-TF-VV5"/>
@@ -104,13 +111,16 @@
                             <constraint firstItem="pJh-ye-uoI" firstAttribute="top" secondItem="014-OQ-kB6" secondAttribute="bottom" constant="7" id="fzg-Zy-tVg"/>
                             <constraint firstItem="ks7-jV-o6b" firstAttribute="leading" secondItem="tNF-v6-VxJ" secondAttribute="leading" id="juy-GV-3AS"/>
                             <constraint firstItem="bm1-l3-1y1" firstAttribute="bottom" secondItem="ks7-jV-o6b" secondAttribute="bottom" constant="-25" id="nE7-wu-arn"/>
+                            <constraint firstItem="VX3-KB-Ci1" firstAttribute="trailing" secondItem="pkY-za-rhS" secondAttribute="trailing" id="oDl-u2-ZAE"/>
                             <constraint firstItem="ks7-jV-o6b" firstAttribute="height" secondItem="Aaz-Yt-v9o" secondAttribute="height" multiplier="1:2" id="su7-XP-4SG"/>
                             <constraint firstItem="014-OQ-kB6" firstAttribute="top" secondItem="pkY-za-rhS" secondAttribute="bottom" constant="7" id="t7C-PV-fHp"/>
+                            <constraint firstItem="VX3-KB-Ci1" firstAttribute="leading" secondItem="pkY-za-rhS" secondAttribute="leading" id="uTj-lH-eTc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c6c-dF-KeD"/>
                     <connections>
                         <outlet property="categoryLabel" destination="014-OQ-kB6" id="Iby-z0-duv"/>
+                        <outlet property="descriptionLabel" destination="VX3-KB-Ci1" id="LWK-Rd-ZEc"/>
                         <outlet property="nameLabel" destination="pkY-za-rhS" id="reE-La-2VM"/>
                         <outlet property="priceLabel" destination="pJh-ye-uoI" id="4gA-GQ-EPC"/>
                         <outlet property="productImageView" destination="ks7-jV-o6b" id="cta-Jj-jfo"/>

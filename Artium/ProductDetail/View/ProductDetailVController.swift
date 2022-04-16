@@ -13,6 +13,7 @@ class ProductDetailVController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var ratingView: RatingView!
     
     var product: Product?
@@ -35,6 +36,7 @@ class ProductDetailVController: UIViewController {
             self.nameLabel.text = detail.title
             self.categoryLabel.text = detail.category?.capitalized
             self.priceLabel.text = "₹\(detail.price)"
+            self.descriptionLabel.text = detail.description
             self.ratingView.isHidden = false
             self.ratingView.setRatingValue(rating: detail.rating)
         }

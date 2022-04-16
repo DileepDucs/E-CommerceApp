@@ -15,7 +15,6 @@ class RatingView: UIView {
     @IBOutlet weak var ratingLabel: UILabel!
     @IBOutlet weak var countLabel: UILabel!
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

@@ -191,6 +191,8 @@
 			children = (
 				F05AB9452809EE0F00A4B64D /* ProductDetail */,
 				F0803DD428071D95001A60BE /* Home */,
+				F0A35F60280966ED00FC0EF0 /* VerticaleTray */,
+				F05E17C928091A5B00D68843 /* HorizontalTray */,
 				F0803DCE28071801001A60BE /* Common */,
 				F0803DAA28070430001A60BE /* Resources */,
 				F0803D972806FBF5001A60BE /* Network */,
@@ -245,8 +247,6 @@
 			isa = PBXGroup;
 			children = (
 				F02B26FD280AA28C00FA6BEC /* Rating */,
-				F0A35F60280966ED00FC0EF0 /* VerticaleTray */,
-				F05E17C928091A5B00D68843 /* HorizontalTray */,
 				F0803DD128071872001A60BE /* Utility.swift */,
 				F0803DCF2807186A001A60BE /* ActivityIndicator.swift */,
 				F0803D832806FB96001A60BE /* AppDelegate.swift */,
