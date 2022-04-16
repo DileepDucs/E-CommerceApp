@@ -15,9 +15,8 @@ class CategoryCell: UICollectionViewCell {
     }
     
     func configureCellWith(value: String) {
-        self.backgroundColor = .red
         categoryLabel.text = value
-        categoryLabel.textColor = .white
+        categoryLabel.textColor = .gray
     }
 
 }
