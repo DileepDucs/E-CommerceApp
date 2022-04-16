@@ -12,6 +12,8 @@ class ProductDetailVController: UIViewController {
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var ratingView: RatingView!
+    
     var product: Product?
     var viewModel = ProductDetailModel()
     var productId = 0
@@ -31,6 +33,7 @@ class ProductDetailVController: UIViewController {
         DispatchQueue.main.async {
             self.nameLabel.text = detail.title
             self.categoryLabel.text = detail.category?.capitalized
+            self.ratingView.setRatingValue(rating: detail.rating)
         }
     }
 }

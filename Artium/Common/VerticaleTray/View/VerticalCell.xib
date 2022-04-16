@@ -24,11 +24,11 @@
                                 <rect key="frame" x="0.0" y="6" width="172" height="204.5"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yM7-Na-I7y" customClass="RatingView" customModule="Artium" customModuleProvider="target">
-                                <rect key="frame" x="92" y="180.5" width="70" height="22"/>
+                                <rect key="frame" x="90" y="180.5" width="72" height="22"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="J5k-p1-qAH"/>
-                                    <constraint firstAttribute="width" constant="70" id="WLh-uo-Xmi"/>
+                                    <constraint firstAttribute="width" constant="72" id="WLh-uo-Xmi"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSk-yR-a4t">

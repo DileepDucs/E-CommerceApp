@@ -35,4 +35,10 @@ class RatingView: UIView {
         contentView.backgroundColor = .clear
         curveView.layer.cornerRadius = 10.0
     }
+    
+    func setRatingValue(rating: Rating?) {
+        guard let rating = rating else { return }
+        ratingLabel.text = "\(rating.rate)"
+        countLabel.text = "\(rating.count)"
+    }
 }

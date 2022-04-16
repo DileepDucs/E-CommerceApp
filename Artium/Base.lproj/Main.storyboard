@@ -74,12 +74,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bm1-l3-1y1" customClass="RatingView" customModule="Artium" customModuleProvider="target">
+                                <rect key="frame" x="317" y="504" width="72" height="22"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="td2-kF-1iu"/>
+                                    <constraint firstAttribute="width" constant="72" id="wsc-4C-wbm"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tNF-v6-VxJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="tNF-v6-VxJ" firstAttribute="trailing" secondItem="Pll-bw-OP6" secondAttribute="trailing" constant="12" id="3Eu-qd-T9K"/>
                             <constraint firstItem="tNF-v6-VxJ" firstAttribute="trailing" secondItem="ks7-jV-o6b" secondAttribute="trailing" id="66R-Cx-i7M"/>
+                            <constraint firstItem="Pll-bw-OP6" firstAttribute="top" secondItem="bm1-l3-1y1" secondAttribute="bottom" constant="25" id="HoY-yF-4VT"/>
+                            <constraint firstItem="tNF-v6-VxJ" firstAttribute="trailing" secondItem="bm1-l3-1y1" secondAttribute="trailing" constant="25" id="LUq-jc-wUt"/>
                             <constraint firstItem="xfZ-dN-Iuv" firstAttribute="top" secondItem="Pll-bw-OP6" secondAttribute="bottom" constant="10" id="awe-A7-OlU"/>
                             <constraint firstItem="ks7-jV-o6b" firstAttribute="top" secondItem="tNF-v6-VxJ" secondAttribute="top" id="c34-7g-PS9"/>
                             <constraint firstItem="xfZ-dN-Iuv" firstAttribute="trailing" secondItem="Pll-bw-OP6" secondAttribute="trailing" id="c8e-vm-9oL"/>
@@ -95,6 +105,7 @@
                         <outlet property="categoryLabel" destination="xfZ-dN-Iuv" id="Rfn-pB-LAs"/>
                         <outlet property="nameLabel" destination="Pll-bw-OP6" id="qn7-Lc-wvd"/>
                         <outlet property="productImageView" destination="ks7-jV-o6b" id="cta-Jj-jfo"/>
+                        <outlet property="ratingView" destination="bm1-l3-1y1" id="Lip-Kc-9lj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VSq-VX-h0X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

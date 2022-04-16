@@ -26,13 +26,6 @@ class VerticalCell: UICollectionViewCell {
         nameLabel.text = product.title
         categoryLabel.text = product.category?.capitalized
         priceLabel.text = "₹\(product.price)"
-        setRatingView(rating: product.rating)
+        ratingView.setRatingValue(rating: product.rating)
     }
-    
-    func setRatingView(rating: Rating?) {
-        guard let rating = rating else { return }
-        ratingView.ratingLabel.text = "\(rating.rate)"
-        ratingView.countLabel.text = "\(rating.count)"
-    }
-
 }
