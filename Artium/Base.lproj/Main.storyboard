@@ -17,15 +17,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="oQf-7u-87G">
+                                <rect key="frame" x="0.0" y="40" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="V1o-EE-g3v"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                             <view contentMode="scaleToFill" restorationIdentifier="CategoryView" translatesAutoresizingMaskIntoConstraints="NO" id="8ga-24-n6U" customClass="CategoryView" customModule="Artium" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="67" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="84" width="414" height="60"/>
                                 <color key="backgroundColor" systemColor="tintColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="GKN-X9-iHz"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="awN-yo-eNZ" customClass="VerticalTray" customModule="Artium" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="127" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
@@ -34,16 +41,20 @@
                         <constraints>
                             <constraint firstItem="8ga-24-n6U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Zt-qy-GnA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="awN-yo-eNZ" secondAttribute="trailing" id="CIS-H3-Yp8"/>
-                            <constraint firstItem="8ga-24-n6U" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="67" id="Dd4-o6-Rv1"/>
-                            <constraint firstItem="awN-yo-eNZ" firstAttribute="top" secondItem="8ga-24-n6U" secondAttribute="bottom" id="Fxl-sc-Wkt"/>
+                            <constraint firstItem="awN-yo-eNZ" firstAttribute="top" secondItem="8ga-24-n6U" secondAttribute="bottom" id="Hla-rY-ybN"/>
                             <constraint firstItem="awN-yo-eNZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jem-Tp-Qpq"/>
                             <constraint firstItem="8ga-24-n6U" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xe7-cP-2Ki"/>
-                            <constraint firstAttribute="bottom" secondItem="awN-yo-eNZ" secondAttribute="bottom" id="nEp-Kn-SUB"/>
+                            <constraint firstItem="oQf-7u-87G" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="bwC-c2-H7V"/>
+                            <constraint firstItem="oQf-7u-87G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="e6I-gK-uDT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="awN-yo-eNZ" secondAttribute="bottom" id="nEp-Kn-SUB"/>
+                            <constraint firstItem="8ga-24-n6U" firstAttribute="top" secondItem="oQf-7u-87G" secondAttribute="bottom" id="sYP-l7-Oov"/>
+                            <constraint firstItem="oQf-7u-87G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zVF-06-bJE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8yO-60-5pw"/>
                     <connections>
                         <outlet property="categoryView" destination="8ga-24-n6U" id="N58-rV-PVF"/>
+                        <outlet property="searchBar" destination="oQf-7u-87G" id="GnS-0D-KWE"/>
                         <outlet property="verticalTray" destination="awN-yo-eNZ" id="HjV-CI-nU9"/>
                     </connections>
                 </viewController>

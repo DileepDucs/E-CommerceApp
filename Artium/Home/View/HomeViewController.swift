@@ -9,19 +9,13 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var categoryView: CategoryView!
     @IBOutlet weak var verticalTray: VerticalTray!
     
-    private lazy var searchBar: UISearchBar = {
-        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 10, width: Utility.screenWidth - 30, height: 40))
-        searchBar.placeholder = "Search your item"
-        searchBar.delegate = self
-        return searchBar
-    }()
-        
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupNavigationBar()
+        setupSearchBar()
         verticalTray.delegate = self
     }
     
@@ -30,9 +24,9 @@ class HomeViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
-    private func setupNavigationBar() {
-        let navigationBar = UIBarButtonItem(customView: searchBar)
-        navigationItem.leftBarButtonItem = navigationBar
+    private func setupSearchBar() {
+        searchBar.placeholder = "Search your item"
+        searchBar.delegate = self
     }
     
     /// This function navigate to the search detail screen.
@@ -48,11 +42,9 @@ extension HomeViewController: UISearchBarDelegate {
     // This function get called on search button clicked in keyboards and call API to fetch the results.
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text else { return }
-        //githubSearchItemsWith(name: text)
-        //searchBar.endEditing(true)
+        searchBar.endEditing(true)
     }
 }
-
 
 extension HomeViewController: VerticalTrayDelegate {
     func didSelectProductWith(product: Product) {
