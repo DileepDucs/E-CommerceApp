@@ -10,6 +10,8 @@
 		B79FE7A923AD2D3101DB4134 /* Pods_Artium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6F7A91ACD865099AF3A396 /* Pods_Artium.framework */; };
 		F001E4852807CB7800C7482D /* HomeServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001E4842807CB7800C7482D /* HomeServiceManager.swift */; };
 		F02B26FA280A75C600FA6BEC /* ProductDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B26F9280A75C600FA6BEC /* ProductDetailModel.swift */; };
+		F02B26FC280AA27F00FA6BEC /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B26FB280AA27F00FA6BEC /* RatingView.swift */; };
+		F02B26FF280AA2DC00FA6BEC /* RatingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F02B26FE280AA2DC00FA6BEC /* RatingView.xib */; };
 		F05AB9492809EE7600A4B64D /* ProductDetailVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05AB9482809EE7600A4B64D /* ProductDetailVController.swift */; };
 		F05E17CF28093DF000D68843 /* HorizontalTray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05E17CE28093DF000D68843 /* HorizontalTray.swift */; };
 		F05E17D128093E7400D68843 /* HorizontalTray.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05E17D028093E7400D68843 /* HorizontalTray.xib */; };
@@ -49,6 +51,8 @@
 		B379A28B42A956D8CF0A6BDB /* Pods-Artium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artium.release.xcconfig"; path = "Target Support Files/Pods-Artium/Pods-Artium.release.xcconfig"; sourceTree = "<group>"; };
 		F001E4842807CB7800C7482D /* HomeServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceManager.swift; sourceTree = "<group>"; };
 		F02B26F9280A75C600FA6BEC /* ProductDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailModel.swift; sourceTree = "<group>"; };
+		F02B26FB280AA27F00FA6BEC /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		F02B26FE280AA2DC00FA6BEC /* RatingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RatingView.xib; sourceTree = "<group>"; };
 		F05AB9482809EE7600A4B64D /* ProductDetailVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVController.swift; sourceTree = "<group>"; };
 		F05E17CE28093DF000D68843 /* HorizontalTray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalTray.swift; sourceTree = "<group>"; };
 		F05E17D028093E7400D68843 /* HorizontalTray.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalTray.xib; sourceTree = "<group>"; };
@@ -119,6 +123,15 @@
 				F001E4842807CB7800C7482D /* HomeServiceManager.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		F02B26FD280AA28C00FA6BEC /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				F02B26FB280AA27F00FA6BEC /* RatingView.swift */,
+				F02B26FE280AA2DC00FA6BEC /* RatingView.xib */,
+			);
+			path = Rating;
 			sourceTree = "<group>";
 		};
 		F05AB9452809EE0F00A4B64D /* ProductDetail */ = {
@@ -231,6 +244,7 @@
 		F0803DCE28071801001A60BE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				F02B26FD280AA28C00FA6BEC /* Rating */,
 				F0A35F60280966ED00FC0EF0 /* VerticaleTray */,
 				F05E17C928091A5B00D68843 /* HorizontalTray */,
 				F0803DD128071872001A60BE /* Utility.swift */,
@@ -399,6 +413,7 @@
 				F0A35F692809823F00FC0EF0 /* VerticalCell.xib in Resources */,
 				F0803D8B2806FB96001A60BE /* Main.storyboard in Resources */,
 				F0A35F652809817600FC0EF0 /* VerticalTray.xib in Resources */,
+				F02B26FF280AA2DC00FA6BEC /* RatingView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +469,7 @@
 				F0803DA42806FBF5001A60BE /* NetworkManager.swift in Sources */,
 				F0A35F632809812700FC0EF0 /* VerticalTray.swift in Sources */,
 				F05E17CF28093DF000D68843 /* HorizontalTray.swift in Sources */,
+				F02B26FC280AA27F00FA6BEC /* RatingView.swift in Sources */,
 				F0803D882806FB96001A60BE /* HomeViewController.swift in Sources */,
 				F0803DA72806FBF5001A60BE /* EndPointType.swift in Sources */,
 				F0803D842806FB96001A60BE /* AppDelegate.swift in Sources */,
