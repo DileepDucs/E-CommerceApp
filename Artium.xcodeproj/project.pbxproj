@@ -189,7 +189,6 @@
 			children = (
 				F05AB9452809EE0F00A4B64D /* ProductDetail */,
 				F0803DD428071D95001A60BE /* Home */,
-				F0A35F60280966ED00FC0EF0 /* VerticaleTray */,
 				F05E17C928091A5B00D68843 /* Category */,
 				F0803DCE28071801001A60BE /* Common */,
 				F0803DAA28070430001A60BE /* Resources */,
@@ -255,6 +254,7 @@
 		F0803DD428071D95001A60BE /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				F0A35F60280966ED00FC0EF0 /* VerticaleTray */,
 				F0803DE328073974001A60BE /* Model */,
 				F0803DD928072052001A60BE /* Request */,
 				F0803DD628071DB4001A60BE /* ViewModel */,
