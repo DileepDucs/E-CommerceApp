@@ -43,6 +43,7 @@ class VerticalTray: UIView {
         let nib = UINib(nibName: "VerticalCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "VerticalCell")
         collectionView.dataSource = self
+        collectionView.delegate = self
         DispatchQueue.main.async {
             ActivityIndicator.start()
         }

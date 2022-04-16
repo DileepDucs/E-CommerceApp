@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B79FE7A923AD2D3101DB4134 /* Pods_Artium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F6F7A91ACD865099AF3A396 /* Pods_Artium.framework */; };
 		F001E4852807CB7800C7482D /* HomeServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F001E4842807CB7800C7482D /* HomeServiceManager.swift */; };
+		F02B26FA280A75C600FA6BEC /* ProductDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B26F9280A75C600FA6BEC /* ProductDetailModel.swift */; };
 		F05AB9492809EE7600A4B64D /* ProductDetailVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05AB9482809EE7600A4B64D /* ProductDetailVController.swift */; };
 		F05E17CF28093DF000D68843 /* HorizontalTray.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05E17CE28093DF000D68843 /* HorizontalTray.swift */; };
 		F05E17D128093E7400D68843 /* HorizontalTray.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05E17D028093E7400D68843 /* HorizontalTray.xib */; };
@@ -47,6 +48,7 @@
 		A6BB4787E7F5C52DD164A001 /* Pods-Artium.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artium.debug.xcconfig"; path = "Target Support Files/Pods-Artium/Pods-Artium.debug.xcconfig"; sourceTree = "<group>"; };
 		B379A28B42A956D8CF0A6BDB /* Pods-Artium.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artium.release.xcconfig"; path = "Target Support Files/Pods-Artium/Pods-Artium.release.xcconfig"; sourceTree = "<group>"; };
 		F001E4842807CB7800C7482D /* HomeServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServiceManager.swift; sourceTree = "<group>"; };
+		F02B26F9280A75C600FA6BEC /* ProductDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailModel.swift; sourceTree = "<group>"; };
 		F05AB9482809EE7600A4B64D /* ProductDetailVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVController.swift; sourceTree = "<group>"; };
 		F05E17CE28093DF000D68843 /* HorizontalTray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalTray.swift; sourceTree = "<group>"; };
 		F05E17D028093E7400D68843 /* HorizontalTray.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalTray.xib; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 		F05AB9472809EE3000A4B64D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				F02B26F9280A75C600FA6BEC /* ProductDetailModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -468,6 +471,7 @@
 				F05E17D428093EE900D68843 /* HorizontalCell.swift in Sources */,
 				F0803DD828071F8A001A60BE /* HomeViewModel.swift in Sources */,
 				F0803DD228071872001A60BE /* Utility.swift in Sources */,
+				F02B26FA280A75C600FA6BEC /* ProductDetailModel.swift in Sources */,
 				F0803DA62806FBF5001A60BE /* NetworkManagerProtocol.swift in Sources */,
 				F0803DDB28072080001A60BE /* SearchRequest.swift in Sources */,
 				F05AB9492809EE7600A4B64D /* ProductDetailVController.swift in Sources */,
