@@ -62,48 +62,57 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ks7-jV-o6b">
                                 <rect key="frame" x="0.0" y="88" width="414" height="448"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pll-bw-OP6">
-                                <rect key="frame" x="12" y="551" width="390" height="16.5"/>
-                                <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="14"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xfZ-dN-Iuv">
-                                <rect key="frame" x="12" y="577.5" width="390" height="14.5"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bm1-l3-1y1" customClass="RatingView" customModule="Artium" customModuleProvider="target">
-                                <rect key="frame" x="317" y="504" width="72" height="22"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bm1-l3-1y1" customClass="RatingView" customModule="Artium" customModuleProvider="target">
+                                <rect key="frame" x="317" y="489" width="72" height="22"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="td2-kF-1iu"/>
                                     <constraint firstAttribute="width" constant="72" id="wsc-4C-wbm"/>
                                 </constraints>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkY-za-rhS">
+                                <rect key="frame" x="15" y="556" width="384" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.22381302710000001" green="0.22679436210000001" blue="0.26274967189999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="014-OQ-kB6">
+                                <rect key="frame" x="15" y="563" width="384" height="0.0"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJh-ye-uoI">
+                                <rect key="frame" x="15" y="570" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="tNF-v6-VxJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="tNF-v6-VxJ" firstAttribute="trailing" secondItem="Pll-bw-OP6" secondAttribute="trailing" constant="12" id="3Eu-qd-T9K"/>
+                            <constraint firstItem="pkY-za-rhS" firstAttribute="top" secondItem="ks7-jV-o6b" secondAttribute="bottom" constant="20" id="3Y3-mw-pO9"/>
+                            <constraint firstItem="014-OQ-kB6" firstAttribute="trailing" secondItem="pkY-za-rhS" secondAttribute="trailing" id="5ZT-PP-kOK"/>
                             <constraint firstItem="tNF-v6-VxJ" firstAttribute="trailing" secondItem="ks7-jV-o6b" secondAttribute="trailing" id="66R-Cx-i7M"/>
-                            <constraint firstItem="Pll-bw-OP6" firstAttribute="top" secondItem="bm1-l3-1y1" secondAttribute="bottom" constant="25" id="HoY-yF-4VT"/>
                             <constraint firstItem="tNF-v6-VxJ" firstAttribute="trailing" secondItem="bm1-l3-1y1" secondAttribute="trailing" constant="25" id="LUq-jc-wUt"/>
-                            <constraint firstItem="xfZ-dN-Iuv" firstAttribute="top" secondItem="Pll-bw-OP6" secondAttribute="bottom" constant="10" id="awe-A7-OlU"/>
+                            <constraint firstItem="pkY-za-rhS" firstAttribute="leading" secondItem="tNF-v6-VxJ" secondAttribute="leading" constant="15" id="NOx-WO-faI"/>
+                            <constraint firstItem="014-OQ-kB6" firstAttribute="leading" secondItem="pkY-za-rhS" secondAttribute="leading" id="VZV-TF-VV5"/>
+                            <constraint firstAttribute="trailing" secondItem="pkY-za-rhS" secondAttribute="trailing" constant="15" id="Xi1-EN-ebX"/>
                             <constraint firstItem="ks7-jV-o6b" firstAttribute="top" secondItem="tNF-v6-VxJ" secondAttribute="top" id="c34-7g-PS9"/>
-                            <constraint firstItem="xfZ-dN-Iuv" firstAttribute="trailing" secondItem="Pll-bw-OP6" secondAttribute="trailing" id="c8e-vm-9oL"/>
+                            <constraint firstItem="pJh-ye-uoI" firstAttribute="leading" secondItem="014-OQ-kB6" secondAttribute="leading" id="dbg-kd-OXt"/>
+                            <constraint firstItem="pJh-ye-uoI" firstAttribute="top" secondItem="014-OQ-kB6" secondAttribute="bottom" constant="7" id="fzg-Zy-tVg"/>
                             <constraint firstItem="ks7-jV-o6b" firstAttribute="leading" secondItem="tNF-v6-VxJ" secondAttribute="leading" id="juy-GV-3AS"/>
-                            <constraint firstItem="xfZ-dN-Iuv" firstAttribute="leading" secondItem="Pll-bw-OP6" secondAttribute="leading" id="nqk-eN-dL3"/>
+                            <constraint firstItem="bm1-l3-1y1" firstAttribute="bottom" secondItem="ks7-jV-o6b" secondAttribute="bottom" constant="-25" id="nE7-wu-arn"/>
                             <constraint firstItem="ks7-jV-o6b" firstAttribute="height" secondItem="Aaz-Yt-v9o" secondAttribute="height" multiplier="1:2" id="su7-XP-4SG"/>
-                            <constraint firstItem="Pll-bw-OP6" firstAttribute="leading" secondItem="tNF-v6-VxJ" secondAttribute="leading" constant="12" id="vN3-wi-Tfw"/>
-                            <constraint firstItem="Pll-bw-OP6" firstAttribute="top" secondItem="ks7-jV-o6b" secondAttribute="bottom" constant="15" id="xsA-fX-tUA"/>
+                            <constraint firstItem="014-OQ-kB6" firstAttribute="top" secondItem="pkY-za-rhS" secondAttribute="bottom" constant="7" id="t7C-PV-fHp"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="c6c-dF-KeD"/>
                     <connections>
-                        <outlet property="categoryLabel" destination="xfZ-dN-Iuv" id="Rfn-pB-LAs"/>
-                        <outlet property="nameLabel" destination="Pll-bw-OP6" id="qn7-Lc-wvd"/>
+                        <outlet property="categoryLabel" destination="014-OQ-kB6" id="Iby-z0-duv"/>
+                        <outlet property="nameLabel" destination="pkY-za-rhS" id="reE-La-2VM"/>
+                        <outlet property="priceLabel" destination="pJh-ye-uoI" id="4gA-GQ-EPC"/>
                         <outlet property="productImageView" destination="ks7-jV-o6b" id="cta-Jj-jfo"/>
                         <outlet property="ratingView" destination="bm1-l3-1y1" id="Lip-Kc-9lj"/>
                     </connections>

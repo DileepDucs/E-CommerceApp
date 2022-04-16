@@ -12,6 +12,7 @@ class ProductDetailVController: UIViewController {
     @IBOutlet weak var productImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var ratingView: RatingView!
     
     var product: Product?
@@ -33,6 +34,8 @@ class ProductDetailVController: UIViewController {
         DispatchQueue.main.async {
             self.nameLabel.text = detail.title
             self.categoryLabel.text = detail.category?.capitalized
+            self.priceLabel.text = "₹\(detail.price)"
+            self.ratingView.isHidden = false
             self.ratingView.setRatingValue(rating: detail.rating)
         }
     }
