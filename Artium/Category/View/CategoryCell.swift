@@ -1,5 +1,5 @@
 //
-//  HorizontalCell.swift
+//  CategoryCell.swift
 //  Artium
 //
 //  Created by Dileep Jaiswal on 15/04/22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HorizontalCell: UICollectionViewCell {
+class CategoryCell: UICollectionViewCell {
     
     @IBOutlet weak var categoryLabel: UILabel!
     override func awakeFromNib() {

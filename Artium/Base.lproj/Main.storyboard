@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" restorationIdentifier="HorizontalTray" translatesAutoresizingMaskIntoConstraints="NO" id="8ga-24-n6U" customClass="HorizontalTray" customModule="Artium" customModuleProvider="target">
+                            <view contentMode="scaleToFill" restorationIdentifier="CategoryView" translatesAutoresizingMaskIntoConstraints="NO" id="8ga-24-n6U" customClass="CategoryView" customModule="Artium" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="67" width="414" height="60"/>
                                 <color key="backgroundColor" systemColor="tintColor"/>
                                 <constraints>
@@ -43,7 +43,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="8yO-60-5pw"/>
                     <connections>
-                        <outlet property="horizontalTray" destination="8ga-24-n6U" id="iHe-Ul-fAn"/>
+                        <outlet property="categoryView" destination="8ga-24-n6U" id="N58-rV-PVF"/>
                         <outlet property="verticalTray" destination="awN-yo-eNZ" id="HjV-CI-nU9"/>
                     </connections>
                 </viewController>

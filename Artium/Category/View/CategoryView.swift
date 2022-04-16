@@ -1,5 +1,5 @@
 //
-//  HorizontalTray.swift
+//  CategoryView.swift
 //  Artium
 //
 //  Created by Dileep Jaiswal on 15/04/22.
@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-class HorizontalTray: UIView {
+class CategoryView: UIView {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -26,7 +26,7 @@ class HorizontalTray: UIView {
     
     private func commonInit() {
         let bundle = Bundle(for: type(of: self))
-        bundle.loadNibNamed("HorizontalTray", owner: self, options: nil)
+        bundle.loadNibNamed("CategoryView", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -35,8 +35,8 @@ class HorizontalTray: UIView {
     }
     
     private func initCollectionView() {
-        let nib = UINib(nibName: "HorizontalCell", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: "HorizontalCell")
+        let nib = UINib(nibName: "CategoryCell", bundle: nil)
+        collectionView.register(nib, forCellWithReuseIdentifier: "CategoryCell")
         collectionView.dataSource = self
         categoryViewModel.delegate = self
         DispatchQueue.main.async {
@@ -46,13 +46,13 @@ class HorizontalTray: UIView {
     }
 }
 
-extension HorizontalTray: UICollectionViewDataSource {
+extension CategoryView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoryViewModel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HorizontalCell", for: indexPath) as? HorizontalCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCell", for: indexPath) as? CategoryCell else {
             fatalError("can't dequeue CustomCell")
         }
         let category = categoryViewModel.getCategory(index: indexPath.row)
@@ -61,7 +61,7 @@ extension HorizontalTray: UICollectionViewDataSource {
     }
 }
 
-extension HorizontalTray: CategoryViewModelDelegate {
+extension CategoryView: CategoryViewModelDelegate {
     func loadCategorySuccessfully() {
         DispatchQueue.main.async {
             self.collectionView.reloadData()
