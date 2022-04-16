@@ -56,8 +56,9 @@ extension HomeViewController: UISearchBarDelegate {
 
 extension HomeViewController: VerticalTrayDelegate {
     func didSelectProductWith(product: Product) {
-        let detailViewController = ProductDetailVController()
-        detailViewController.productId = product.id
-        navigationController?.pushViewController(detailViewController, animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let detailVC = storyboard.instantiateViewController(withIdentifier: "ProductDetailVController") as! ProductDetailVController
+        detailVC.productId = product.id
+        self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

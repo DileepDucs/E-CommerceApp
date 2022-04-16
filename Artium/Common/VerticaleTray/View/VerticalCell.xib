@@ -5,7 +5,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,32 +21,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="172" height="286"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yIV-Dw-kCb">
-                                <rect key="frame" x="0.0" y="0.0" width="172" height="179"/>
+                                <rect key="frame" x="0.0" y="6" width="172" height="204.5"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSk-yR-a4t">
+                                <rect key="frame" x="0.0" y="214.5" width="172" height="71.5"/>
+                                <color key="backgroundColor" red="0.94117647410000005" green="0.94117653369999998" blue="0.94117659330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZy-qO-xh4">
-                                <rect key="frame" x="8" y="186" width="156" height="15.5"/>
+                                <rect key="frame" x="8" y="219.5" width="156" height="15.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.22381302710000001" green="0.22679436210000001" blue="0.26274967189999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aym-OH-AFM">
-                                <rect key="frame" x="8" y="204.5" width="156" height="14"/>
+                                <rect key="frame" x="8" y="238" width="156" height="14"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufi-Cg-7Qg">
+                                <rect key="frame" x="8" y="255" width="31.5" height="14"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="nSk-yR-a4t" firstAttribute="leading" secondItem="sKU-py-Dud" secondAttribute="leading" id="6F4-4I-WF5"/>
                             <constraint firstItem="aym-OH-AFM" firstAttribute="top" secondItem="NZy-qO-xh4" secondAttribute="bottom" constant="3" id="8YP-BP-H7v"/>
-                            <constraint firstItem="NZy-qO-xh4" firstAttribute="top" secondItem="yIV-Dw-kCb" secondAttribute="bottom" constant="7" id="B1f-9K-OHI"/>
+                            <constraint firstItem="NZy-qO-xh4" firstAttribute="top" secondItem="yIV-Dw-kCb" secondAttribute="bottom" constant="9" id="B1f-9K-OHI"/>
                             <constraint firstItem="NZy-qO-xh4" firstAttribute="leading" secondItem="sKU-py-Dud" secondAttribute="leading" constant="8" id="GVK-fX-uVv"/>
-                            <constraint firstItem="yIV-Dw-kCb" firstAttribute="top" secondItem="sKU-py-Dud" secondAttribute="top" id="OA3-4A-X4Z"/>
+                            <constraint firstItem="ufi-Cg-7Qg" firstAttribute="top" secondItem="aym-OH-AFM" secondAttribute="bottom" constant="3" id="JwR-Zw-lFz"/>
+                            <constraint firstAttribute="bottom" secondItem="nSk-yR-a4t" secondAttribute="bottom" id="KZy-Vl-U4q"/>
+                            <constraint firstItem="yIV-Dw-kCb" firstAttribute="top" secondItem="sKU-py-Dud" secondAttribute="top" constant="6" id="OA3-4A-X4Z"/>
                             <constraint firstAttribute="trailing" secondItem="yIV-Dw-kCb" secondAttribute="trailing" id="dEu-rg-8mj"/>
                             <constraint firstItem="yIV-Dw-kCb" firstAttribute="leading" secondItem="sKU-py-Dud" secondAttribute="leading" id="lll-iu-XKr"/>
+                            <constraint firstItem="nSk-yR-a4t" firstAttribute="top" secondItem="yIV-Dw-kCb" secondAttribute="bottom" constant="4" id="nza-56-GlB"/>
                             <constraint firstItem="aym-OH-AFM" firstAttribute="leading" secondItem="NZy-qO-xh4" secondAttribute="leading" id="qBQ-R2-fx3"/>
-                            <constraint firstItem="yIV-Dw-kCb" firstAttribute="height" secondItem="sKU-py-Dud" secondAttribute="height" multiplier="1:1.6" id="taE-ny-BZy"/>
+                            <constraint firstItem="ufi-Cg-7Qg" firstAttribute="leading" secondItem="aym-OH-AFM" secondAttribute="leading" id="rMJ-6w-eIG"/>
+                            <constraint firstItem="yIV-Dw-kCb" firstAttribute="height" secondItem="sKU-py-Dud" secondAttribute="height" multiplier="1:1.4" id="taE-ny-BZy"/>
                             <constraint firstAttribute="trailing" secondItem="NZy-qO-xh4" secondAttribute="trailing" constant="8" id="tvw-at-BG4"/>
+                            <constraint firstAttribute="trailing" secondItem="nSk-yR-a4t" secondAttribute="trailing" id="uQc-Z4-KB9"/>
                             <constraint firstItem="aym-OH-AFM" firstAttribute="trailing" secondItem="NZy-qO-xh4" secondAttribute="trailing" id="vU6-pC-2d0"/>
                         </constraints>
                     </view>
@@ -65,13 +80,9 @@
                 <outlet property="categoryLabel" destination="aym-OH-AFM" id="zmi-cq-ae5"/>
                 <outlet property="imageView" destination="yIV-Dw-kCb" id="Z9g-HY-LK3"/>
                 <outlet property="nameLabel" destination="NZy-qO-xh4" id="1id-eH-dGK"/>
+                <outlet property="priceLabel" destination="ufi-Cg-7Qg" id="6ov-5a-Of9"/>
             </connections>
             <point key="canvasLocation" x="60.869565217391312" y="91.741071428571431"/>
         </collectionViewCell>
     </objects>
-    <resources>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-    </resources>
 </document>

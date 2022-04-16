@@ -58,13 +58,13 @@ class VerticalTray: UIView {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         
         //Get device width
-        let width = UIScreen.main.bounds.width - 11
+        let width = UIScreen.main.bounds.width - 1
         
         //set section inset as per your requirement.
-        layout.sectionInset = UIEdgeInsets(top: 10, left: 5, bottom: 2, right: 5)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
         //set cell item size here
-        layout.itemSize = CGSize(width: width / 2, height: width / 1.7)
+        layout.itemSize = CGSize(width: width / 2, height: width / 1.4)
         
         //set Minimum spacing between 2 items
         layout.minimumInteritemSpacing = 1

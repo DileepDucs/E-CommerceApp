@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 struct Product: Codable {
     var id: Int = 0
@@ -14,7 +15,7 @@ struct Product: Codable {
     var description: String? = nil
     var category: String? = nil
     var image: String? = nil
-    
+    var rating: Rating? = nil
     
     enum CodingKeys: String, CodingKey {
         case id
@@ -23,6 +24,7 @@ struct Product: Codable {
         case description
         case category
         case image
+        case rating
     }
     
     init(from decoder: Decoder) throws {
@@ -33,6 +35,23 @@ struct Product: Codable {
         description = try values.decode(String.self, forKey: .description)
         category = try values.decode(String.self, forKey: .category)
         image = try values.decode(String.self, forKey: .image)
+        rating = try values.decode(Rating.self, forKey: .rating)
+    }
+}
+
+struct Rating: Codable {
+    var rate: Double = 0
+    var count: Int = 0
+    
+    enum CodingKeys: String, CodingKey {
+        case rate
+        case count
+    }
+    
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        rate = try values.decode(Double.self, forKey: .rate)
+        count = try values.decode(Int.self, forKey: .count)
     }
 }
 
