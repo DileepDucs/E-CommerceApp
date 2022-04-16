@@ -17,6 +17,7 @@ class ProductViewModel {
     var delegate: ProductViewModelDelegate?
     var apiClient = APIClient()
     var productItems = [Product]()
+    var filteredItems = [Product]()
     
     // Product:-
     
@@ -26,6 +27,7 @@ class ProductViewModel {
             switch result {
             case .success(let list):
                 self.productItems = list
+                self.filteredItems = list
                 self.delegate?.loadProductSuccessfully()
             case .failure(let error):
                 self.delegate?.failedToLoadProductList(error: error)
@@ -35,12 +37,16 @@ class ProductViewModel {
     
     // This var retun the product items count
     var count: Int  {
-        return self.productItems.count
+        return self.filteredItems.count
     }
     
     // This function retturn product object for the given index.
     func getProduct(index: Int) -> Product{
-        return productItems[index]
+        return filteredItems[index]
+    }
+    
+    func filterObjectWith(category: String) {
+        filteredItems = productItems.filter { $0.category == category }
     }
 }
 

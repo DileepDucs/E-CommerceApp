@@ -7,12 +7,17 @@
 
 import UIKit
 
+protocol CategoryViewDelegate {
+    func didSelectCategoryWith(value: String)
+}
+
 @IBDesignable
 class CategoryView: UIView {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     var categoryViewModel = CategoryViewModel()
+    var delegate: CategoryViewDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -61,6 +66,7 @@ class CategoryView: UIView {
         let nib = UINib(nibName: "CategoryCell", bundle: nil)
         collectionView.register(nib, forCellWithReuseIdentifier: "CategoryCell")
         collectionView.dataSource = self
+        collectionView.delegate = self
         categoryViewModel.delegate = self
         DispatchQueue.main.async {
             ActivityIndicator.start()
@@ -69,7 +75,7 @@ class CategoryView: UIView {
     }
 }
 
-extension CategoryView: UICollectionViewDataSource {
+extension CategoryView: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return categoryViewModel.count
     }
@@ -81,6 +87,11 @@ extension CategoryView: UICollectionViewDataSource {
         let category = categoryViewModel.getCategory(index: indexPath.row)
         cell.configureCellWith(value: category.uppercased())
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let category = categoryViewModel.getCategory(index: indexPath.row)
+        self.delegate?.didSelectCategoryWith(value: category)
     }
 }
 

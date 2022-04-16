@@ -18,12 +18,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="oQf-7u-87G">
-                                <rect key="frame" x="0.0" y="34" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="34" width="369" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="V1o-EE-g3v"/>
                                 </constraints>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AID-D0-FC3">
+                                <rect key="frame" x="369" y="34" width="45" height="44"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
                             <view contentMode="scaleToFill" restorationIdentifier="CategoryView" translatesAutoresizingMaskIntoConstraints="NO" id="8ga-24-n6U" customClass="CategoryView" customModule="Artium" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="78" width="414" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -35,20 +40,34 @@
                                 <rect key="frame" x="0.0" y="138" width="414" height="724"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kds-qS-gCK" customClass="SortFilterView" customModule="Artium" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GII-CH-2wM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oQf-7u-87G" secondAttribute="trailing" constant="45" id="1ac-PR-FOm"/>
                             <constraint firstItem="8ga-24-n6U" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7Zt-qy-GnA"/>
+                            <constraint firstAttribute="trailing" secondItem="AID-D0-FC3" secondAttribute="trailing" id="9mI-ZS-f3M"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="awN-yo-eNZ" secondAttribute="trailing" id="CIS-H3-Yp8"/>
+                            <constraint firstItem="kds-qS-gCK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="HU8-58-rn8"/>
+                            <constraint firstItem="kds-qS-gCK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hg4-xh-6ZW"/>
                             <constraint firstItem="awN-yo-eNZ" firstAttribute="top" secondItem="8ga-24-n6U" secondAttribute="bottom" id="Hla-rY-ybN"/>
                             <constraint firstItem="awN-yo-eNZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jem-Tp-Qpq"/>
+                            <constraint firstItem="AID-D0-FC3" firstAttribute="leading" secondItem="oQf-7u-87G" secondAttribute="trailing" id="Sg5-K1-2er"/>
+                            <constraint firstAttribute="bottom" secondItem="kds-qS-gCK" secondAttribute="bottom" id="W8c-uN-Qgn"/>
                             <constraint firstItem="8ga-24-n6U" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xe7-cP-2Ki"/>
                             <constraint firstItem="oQf-7u-87G" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="34" id="bwC-c2-H7V"/>
-                            <constraint firstItem="oQf-7u-87G" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="e6I-gK-uDT"/>
+                            <constraint firstItem="AID-D0-FC3" firstAttribute="top" secondItem="oQf-7u-87G" secondAttribute="top" id="d7x-f9-cuI"/>
+                            <constraint firstItem="AID-D0-FC3" firstAttribute="height" secondItem="oQf-7u-87G" secondAttribute="height" multiplier="1:1" id="e2a-jT-fsN"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="awN-yo-eNZ" secondAttribute="bottom" id="nEp-Kn-SUB"/>
                             <constraint firstItem="8ga-24-n6U" firstAttribute="top" secondItem="oQf-7u-87G" secondAttribute="bottom" id="sYP-l7-Oov"/>
-                            <constraint firstItem="oQf-7u-87G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zVF-06-bJE"/>
+                            <constraint firstItem="oQf-7u-87G" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wEk-6c-I6B"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="8yO-60-5pw"/>

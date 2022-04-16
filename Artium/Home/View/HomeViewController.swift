@@ -17,16 +17,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupSearchBar()
         verticalTray.delegate = self
-//        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
-//            textfield.backgroundColor = UIColor.red
-//        }
-//        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
-//            textfield.textColor = UIColor.white
-//        }
-//        
-//        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
-//            textfield.attributedPlaceholder = NSAttributedString(string: textfield.placeholder ?? "", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
-//        }
+        categoryView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,6 +26,7 @@ class HomeViewController: UIViewController {
     }
     
     private func setupSearchBar() {
+        searchBar.searchBarStyle = .minimal
         searchBar.placeholder = "Search your item"
         searchBar.delegate = self
     }
@@ -62,5 +54,11 @@ extension HomeViewController: VerticalTrayDelegate {
         let detailVC = storyboard.instantiateViewController(withIdentifier: "ProductDetailVController") as! ProductDetailVController
         detailVC.productId = product.id
         self.navigationController?.pushViewController(detailVC, animated: true)
+    }
+}
+
+extension HomeViewController: CategoryViewDelegate {
+    func didSelectCategoryWith(value: String) {
+        verticalTray.filterTrayWith(category: value)
     }
 }

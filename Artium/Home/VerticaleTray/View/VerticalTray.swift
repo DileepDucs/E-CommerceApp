@@ -74,6 +74,13 @@ class VerticalTray: UIView {
         return layout
     }
     
+    func filterTrayWith(category: String) {
+        viewModel.filterObjectWith(category: category)
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+    
 }
 
 extension VerticalTray: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
