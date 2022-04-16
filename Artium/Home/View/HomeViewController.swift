@@ -17,6 +17,16 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupSearchBar()
         verticalTray.delegate = self
+//        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+//            textfield.backgroundColor = UIColor.red
+//        }
+//        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+//            textfield.textColor = UIColor.white
+//        }
+//        
+//        if let textfield = searchBar.value(forKey: "searchField") as? UITextField {
+//            textfield.attributedPlaceholder = NSAttributedString(string: textfield.placeholder ?? "", attributes: [NSAttributedString.Key.foregroundColor : UIColor.white])
+//        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

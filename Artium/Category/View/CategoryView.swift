@@ -30,8 +30,31 @@ class CategoryView: UIView {
         addSubview(contentView)
         contentView.frame = bounds
         contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        contentView.backgroundColor = .lightGray
         initCollectionView()
+        //apply defined layout to collectionview
+        collectionView.collectionViewLayout = collectionViewLayout()
+    }
+    
+    private func collectionViewLayout() -> UICollectionViewLayout {
+        //Define Layout here
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        
+        //Get device width
+        let width = UIScreen.main.bounds.width
+        
+        //set section inset as per your requirement.
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        
+        //set cell item size here
+        layout.itemSize = CGSize(width: width / 3, height: 50)
+        
+        //set Minimum spacing between 2 items
+        layout.minimumInteritemSpacing = 1
+
+        layout.scrollDirection = .horizontal
+        //set minimum vertical line spacing here between two lines in collectionview
+        layout.minimumLineSpacing = 1
+        return layout
     }
     
     private func initCollectionView() {
