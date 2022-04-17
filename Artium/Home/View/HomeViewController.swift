@@ -60,26 +60,37 @@ extension HomeViewController: VerticalTrayDelegate {
 
 extension HomeViewController: CategoryViewDelegate {
     func didSelectCategoryWith(value: String) {
-        verticalTray.filterTrayWith(category: value)
+        verticalTray.filterTrayWithCategories(list: [value])
     }
 }
 
-extension HomeViewController: SortFilterViewDelegate {
+extension HomeViewController: SortFilterViewDelegate, MultiSelectionVCDelegate {
+    func filterProductsWithSelected(items: [String]) {
+        verticalTray.filterTrayWithCategories(list: items)
+    }
+    
+    func sortProductWithSelected(item: String) {
+        verticalTray.sortProductWithSelected(item: item)
+    }
+    
     func didSelectSort() {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "MultiSelectionViewController") as! MultiSelectionViewController
-        vc.screenTitle = "Filter"
-        vc.items = ["Price", "Rating"]
-        self.navigationController?.pushViewController(vc, animated: true)
+        let items = ["Clear All", "Price", "Rating"]
+        didSelectHelper(title: "Filter", items: items, filter: false)
     }
     
     func didSelectfilter() {
+        var items = categoryView.categoryViewModel.categoryList
+        items.insert("Clear All", at: 0)
+        didSelectHelper(title: "Sort By", items: items, filter: true)
+    }
+    
+    func didSelectHelper(title: String, items: [String], filter: Bool) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "MultiSelectionViewController") as! MultiSelectionViewController
-        vc.screenTitle = "Sort By"
-        var items = categoryView.categoryViewModel.categoryList
-        items.insert("All Clear", at: 0)
+        vc.delegate = self
+        vc.screenTitle = title
         vc.items = items
+        vc.filter = filter
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }

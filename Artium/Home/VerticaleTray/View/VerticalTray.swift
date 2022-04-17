@@ -74,8 +74,15 @@ class VerticalTray: UIView {
         return layout
     }
     
-    func filterTrayWith(category: String) {
-        viewModel.filterObjectWith(category: category)
+    func filterTrayWithCategories(list: [String]) {
+        viewModel.filterObjectWithCategories(list: list)
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+    
+    func sortProductWithSelected(item: String) {
+        viewModel.sortProductWithSelected(item: item)
         DispatchQueue.main.async {
             self.collectionView.reloadData()
         }

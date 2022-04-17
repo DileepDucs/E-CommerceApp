@@ -7,6 +7,11 @@
 
 import UIKit
 
+protocol MultiSelectionVCDelegate {
+    func filterProductsWithSelected(items: [String])
+    func sortProductWithSelected(item: String)
+}
+
 private let SectionVegetables = 0
 
 class MultiSelectionViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -15,6 +20,8 @@ class MultiSelectionViewController: UIViewController, UITableViewDataSource, UIT
     var selectedItems = [String]()
     let tableView = UITableView()
     var screenTitle = ""
+    var delegate: MultiSelectionVCDelegate?
+    var filter = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -89,8 +96,13 @@ class MultiSelectionViewController: UIViewController, UITableViewDataSource, UIT
 
     override func setEditing(_ editing: Bool, animated: Bool) {
         super.setEditing(editing, animated: animated)
-        // Toggles the actual editing actions appearing on a table view
-        tableView.setEditing(editing, animated: true)
+        if filter == true {
+            delegate?.filterProductsWithSelected(items: selectedItems)
+        } else {
+            if let last = selectedItems.last {
+                delegate?.sortProductWithSelected(item: last)
+            }
+        }
         self.navigationController?.popViewController(animated: true)
     }
 }

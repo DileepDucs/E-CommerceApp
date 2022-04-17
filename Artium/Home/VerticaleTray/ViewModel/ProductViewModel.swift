@@ -5,6 +5,12 @@
 //  Created by Dileep Jaiswal on 15/04/22.
 //
 
+enum Sort: String {
+    case clearAll = "Clear All"
+    case price = "Price"
+    case rating = "Rating"
+}
+
 // MARK: - SearchViewModelDelegate protocol
 protocol ProductViewModelDelegate {
     func loadProductSuccessfully()
@@ -45,8 +51,26 @@ class ProductViewModel {
         return filteredItems[index]
     }
     
-    func filterObjectWith(category: String) {
-        filteredItems = productItems.filter { $0.category == category }
+    func filterObjectWithCategories(list: [String]) {
+        if list.contains("Clear All") || list.isEmpty {
+            filteredItems = productItems
+        } else {
+            filteredItems = productItems.filter{ list.contains($0.category!) == true }
+        }
+    }
+    
+    func sortProductWithSelected(item: String) {
+        filteredItems = productItems
+        let value = Sort(rawValue: item)
+        switch value {
+        case .clearAll, .none:
+            print("Clear All")
+        case .price:
+            filteredItems.sort { $0.price > $1.price }
+        case .rating:
+            filteredItems.sort { $0.rating!.rate > $1.rating!.rate }
+        }
+        
     }
 }
 
