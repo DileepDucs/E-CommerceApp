@@ -18,6 +18,7 @@ class CategoryView: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
     var categoryViewModel = CategoryViewModel()
     var delegate: CategoryViewDelegate?
+    var currentSelected:Int?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -86,17 +87,21 @@ extension CategoryView: UICollectionViewDataSource, UICollectionViewDelegateFlow
         }
         let category = categoryViewModel.getCategory(index: indexPath.row)
         cell.configureCellWith(value: category.uppercased())
+        cell.backgroundColor = currentSelected == indexPath.row ? UIColor(red: 1.33, green: 0.56, blue: 0.56, alpha: 0.61) : UIColor(red: 247/255, green: 227/255, blue: 247/255, alpha: 0.61)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let category = categoryViewModel.getCategory(index: indexPath.row)
         self.delegate?.didSelectCategoryWith(value: category)
+        currentSelected = indexPath.row
+        collectionView.reloadData()
     }
 }
 
 extension CategoryView: CategoryViewModelDelegate {
     func loadCategorySuccessfully() {
+        currentSelected = 0
         DispatchQueue.main.async {
             self.collectionView.reloadData()
             ActivityIndicator.stop()

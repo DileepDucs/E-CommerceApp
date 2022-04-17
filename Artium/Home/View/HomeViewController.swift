@@ -68,15 +68,8 @@ extension HomeViewController: CategoryViewDelegate {
     }
 }
 
-extension HomeViewController: SortFilterViewDelegate, MultiSelectionVCDelegate {
-    func filterProductsWithSelected(items: [String]) {
-        verticalTray.filterTrayWithCategories(list: items)
-    }
-    
-    func sortProductWithSelected(item: String) {
-        verticalTray.sortProductWithSelected(item: item)
-    }
-    
+extension HomeViewController: SortFilterViewDelegate {
+
     func didSelectSort() {
         let items = ["Clear All", "Price", "Rating"]
         didSelectHelper(title: "Sort By", items: items, filter: false)
@@ -98,4 +91,15 @@ extension HomeViewController: SortFilterViewDelegate, MultiSelectionVCDelegate {
         vc.filter = filter
         self.navigationController?.pushViewController(vc, animated: true)
     }
+}
+
+extension HomeViewController: MultiSelectionVCDelegate {
+    func filterProductsWithSelected(items: [String]) {
+        verticalTray.filterTrayWithCategories(list: items)
+    }
+    
+    func sortProductWithSelected(item: String) {
+        verticalTray.sortProductWithSelected(item: item)
+    }
+    
 }
