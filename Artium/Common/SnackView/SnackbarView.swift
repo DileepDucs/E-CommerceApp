@@ -1,9 +1,8 @@
 //
-//  SnackbarView.swift
-//  KiteCred
+//  Product.swift
+//  Artium
 //
-//  Created by Dileep Jaiswal on 02/05/21.
-//  Copyright © 2021 Dileep Jaiswal. All rights reserved.
+//  Created by Dileep Jaiswal on 16/04/22.
 //
 
 import UIKit

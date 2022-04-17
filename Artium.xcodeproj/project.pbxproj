@@ -48,7 +48,18 @@
 		F0D69F46280BED69007E3F4E /* SnackbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D69F44280BED69007E3F4E /* SnackbarView.swift */; };
 		F0D69F47280BED69007E3F4E /* SnackbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D69F45280BED69007E3F4E /* SnackbarView.xib */; };
 		F0D69F49280C3E53007E3F4E /* MultiSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D69F48280C3E53007E3F4E /* MultiSelectionViewController.swift */; };
+		F0D69F51280CA3BE007E3F4E /* ArtiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D69F50280CA3BE007E3F4E /* ArtiumTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F0D69F52280CA3BE007E3F4E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F0803D782806FB96001A60BE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F0803D7F2806FB96001A60BE;
+			remoteInfo = Artium;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		6F6F7A91ACD865099AF3A396 /* Pods_Artium.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artium.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +107,8 @@
 		F0D69F44280BED69007E3F4E /* SnackbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackbarView.swift; sourceTree = "<group>"; };
 		F0D69F45280BED69007E3F4E /* SnackbarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SnackbarView.xib; sourceTree = "<group>"; };
 		F0D69F48280C3E53007E3F4E /* MultiSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectionViewController.swift; sourceTree = "<group>"; };
+		F0D69F4E280CA3BE007E3F4E /* ArtiumTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArtiumTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0D69F50280CA3BE007E3F4E /* ArtiumTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtiumTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +117,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B79FE7A923AD2D3101DB4134 /* Pods_Artium.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0D69F4B280CA3BE007E3F4E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +214,7 @@
 				F0803D812806FB96001A60BE /* Products */,
 				1564C0EA09C0160E91BFB597 /* Pods */,
 				08B5EF9FCA6A18D7F9CEDF70 /* Frameworks */,
+				F0D69F4F280CA3BE007E3F4E /* ArtiumTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				F0803D802806FB96001A60BE /* Artium.app */,
+				F0D69F4E280CA3BE007E3F4E /* ArtiumTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -393,6 +415,14 @@
 			path = SnackView;
 			sourceTree = "<group>";
 		};
+		F0D69F4F280CA3BE007E3F4E /* ArtiumTests */ = {
+			isa = PBXGroup;
+			children = (
+				F0D69F50280CA3BE007E3F4E /* ArtiumTests.swift */,
+			);
+			path = ArtiumTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -415,6 +445,24 @@
 			productReference = F0803D802806FB96001A60BE /* Artium.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F0D69F4D280CA3BE007E3F4E /* ArtiumTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F0D69F54280CA3BE007E3F4E /* Build configuration list for PBXNativeTarget "ArtiumTests" */;
+			buildPhases = (
+				F0D69F4A280CA3BE007E3F4E /* Sources */,
+				F0D69F4B280CA3BE007E3F4E /* Frameworks */,
+				F0D69F4C280CA3BE007E3F4E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F0D69F53280CA3BE007E3F4E /* PBXTargetDependency */,
+			);
+			name = ArtiumTests;
+			productName = ArtiumTests;
+			productReference = F0D69F4E280CA3BE007E3F4E /* ArtiumTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -427,6 +475,10 @@
 				TargetAttributes = {
 					F0803D7F2806FB96001A60BE = {
 						CreatedOnToolsVersion = 13.2.1;
+					};
+					F0D69F4D280CA3BE007E3F4E = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F0803D7F2806FB96001A60BE;
 					};
 				};
 			};
@@ -444,6 +496,7 @@
 			projectRoot = "";
 			targets = (
 				F0803D7F2806FB96001A60BE /* Artium */,
+				F0D69F4D280CA3BE007E3F4E /* ArtiumTests */,
 			);
 		};
 /* End PBXProject section */
@@ -463,6 +516,13 @@
 				F0A35F652809817600FC0EF0 /* VerticalTray.xib in Resources */,
 				F0D69F47280BED69007E3F4E /* SnackbarView.xib in Resources */,
 				F02B26FF280AA2DC00FA6BEC /* RatingView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0D69F4C280CA3BE007E3F4E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,7 +608,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F0D69F4A280CA3BE007E3F4E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F0D69F51280CA3BE007E3F4E /* ArtiumTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F0D69F53280CA3BE007E3F4E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F0803D7F2806FB96001A60BE /* Artium */;
+			targetProxy = F0D69F52280CA3BE007E3F4E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		F0803D892806FB96001A60BE /* Main.storyboard */ = {
@@ -746,6 +822,44 @@
 			};
 			name = Release;
 		};
+		F0D69F55280CA3BE007E3F4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 754KYY28MV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.identifier.test.ArtiumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Artium.app/Artium";
+			};
+			name = Debug;
+		};
+		F0D69F56280CA3BE007E3F4E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 754KYY28MV;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.identifier.test.ArtiumTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Artium.app/Artium";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -763,6 +877,15 @@
 			buildConfigurations = (
 				F0803D952806FB99001A60BE /* Debug */,
 				F0803D962806FB99001A60BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F0D69F54280CA3BE007E3F4E /* Build configuration list for PBXNativeTarget "ArtiumTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F0D69F55280CA3BE007E3F4E /* Debug */,
+				F0D69F56280CA3BE007E3F4E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
