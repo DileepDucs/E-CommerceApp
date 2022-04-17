@@ -52,7 +52,7 @@ class ProductViewModel {
     }
     
     func filterObjectWithCategories(list: [String]) {
-        if list.contains("Clear All") || list.isEmpty {
+        if list.contains("Clear All") || list.contains("Home") || list.isEmpty {
             filteredItems = productItems
         } else {
             filteredItems = productItems.filter{ list.contains($0.category!) == true }

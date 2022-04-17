@@ -28,6 +28,7 @@ class CategoryViewModel {
             switch result {
             case .success(let list):
                 self.categoryList = list
+                self.categoryList.insert("Home", at: 0)
                 self.delegate?.loadCategorySuccessfully()
             case .failure(let error):
                 self.delegate?.failedToLoadCategory(error: error)

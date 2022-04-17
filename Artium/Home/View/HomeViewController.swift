@@ -27,6 +27,10 @@ class HomeViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
+    override var shouldAutorotate: Bool {
+        false
+    }
+    
     private func setupSearchBar() {
         searchBar.searchBarStyle = .minimal
         searchBar.placeholder = "Search your item"
@@ -75,13 +79,14 @@ extension HomeViewController: SortFilterViewDelegate, MultiSelectionVCDelegate {
     
     func didSelectSort() {
         let items = ["Clear All", "Price", "Rating"]
-        didSelectHelper(title: "Filter", items: items, filter: false)
+        didSelectHelper(title: "Sort By", items: items, filter: false)
     }
     
     func didSelectfilter() {
         var items = categoryView.categoryViewModel.categoryList
+        items.removeFirst()
         items.insert("Clear All", at: 0)
-        didSelectHelper(title: "Sort By", items: items, filter: true)
+        didSelectHelper(title: "Filter", items: items, filter: true)
     }
     
     func didSelectHelper(title: String, items: [String], filter: Bool) {

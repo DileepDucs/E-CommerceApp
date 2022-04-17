@@ -51,7 +51,7 @@ class CategoryView: UIView {
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
         //set cell item size here
-        layout.itemSize = CGSize(width: width / 2.5, height: 45)
+        layout.itemSize = CGSize(width: UIDevice.isPad ? width / 5 : width / 2.5, height: 45)
         
         //set Minimum spacing between 2 items
         layout.minimumInteritemSpacing = 1
