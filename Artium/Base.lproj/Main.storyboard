@@ -132,10 +132,16 @@
                             <constraint firstItem="014-OQ-kB6" firstAttribute="trailing" secondItem="pkY-za-rhS" secondAttribute="trailing" id="5ZT-PP-kOK"/>
                             <constraint firstItem="tNF-v6-VxJ" firstAttribute="trailing" secondItem="ks7-jV-o6b" secondAttribute="trailing" id="66R-Cx-i7M"/>
                             <constraint firstItem="VX3-KB-Ci1" firstAttribute="top" secondItem="pJh-ye-uoI" secondAttribute="bottom" constant="7" id="LHi-15-RoY"/>
-                            <constraint firstItem="tNF-v6-VxJ" firstAttribute="trailing" secondItem="bm1-l3-1y1" secondAttribute="trailing" constant="25" id="LUq-jc-wUt"/>
-                            <constraint firstItem="pkY-za-rhS" firstAttribute="leading" secondItem="tNF-v6-VxJ" secondAttribute="leading" constant="15" id="NOx-WO-faI"/>
+                            <constraint firstItem="tNF-v6-VxJ" firstAttribute="trailing" secondItem="bm1-l3-1y1" secondAttribute="trailing" constant="25" id="LUq-jc-wUt">
+                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                            </constraint>
+                            <constraint firstItem="pkY-za-rhS" firstAttribute="leading" secondItem="tNF-v6-VxJ" secondAttribute="leading" constant="15" id="NOx-WO-faI">
+                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                            </constraint>
                             <constraint firstItem="014-OQ-kB6" firstAttribute="leading" secondItem="pkY-za-rhS" secondAttribute="leading" id="VZV-TF-VV5"/>
-                            <constraint firstAttribute="trailing" secondItem="pkY-za-rhS" secondAttribute="trailing" constant="15" id="Xi1-EN-ebX"/>
+                            <constraint firstAttribute="trailing" secondItem="pkY-za-rhS" secondAttribute="trailing" constant="15" id="Xi1-EN-ebX">
+                                <variation key="heightClass=regular-widthClass=regular" constant="30"/>
+                            </constraint>
                             <constraint firstItem="ks7-jV-o6b" firstAttribute="top" secondItem="tNF-v6-VxJ" secondAttribute="top" id="c34-7g-PS9"/>
                             <constraint firstItem="pJh-ye-uoI" firstAttribute="leading" secondItem="014-OQ-kB6" secondAttribute="leading" id="dbg-kd-OXt"/>
                             <constraint firstItem="pJh-ye-uoI" firstAttribute="top" secondItem="014-OQ-kB6" secondAttribute="bottom" constant="7" id="fzg-Zy-tVg"/>
