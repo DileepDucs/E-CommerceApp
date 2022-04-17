@@ -94,20 +94,24 @@ extension CategoryView: UICollectionViewDataSource, UICollectionViewDelegateFlow
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let category = categoryViewModel.getCategory(index: indexPath.row)
         self.delegate?.didSelectCategoryWith(value: category)
-        currentSelected = indexPath.row
-        collectionView.reloadData()
+        reloadSelectedTabWith(index: indexPath.row)
     }
-}
-
-extension CategoryView: CategoryViewModelDelegate {
-    func loadCategorySuccessfully() {
-        currentSelected = 0
+    
+    func reloadSelectedTabWith(index: Int) {
+        currentSelected = index
         DispatchQueue.main.async {
             self.collectionView.reloadData()
             ActivityIndicator.stop()
         }
     }
+}
+
+extension CategoryView: CategoryViewModelDelegate {
+    func loadCategorySuccessfully() {
+        reloadSelectedTabWith(index: 0)
+    }
     
     func failedToLoadCategory(error: NetworkError) {
+    
     }
 }

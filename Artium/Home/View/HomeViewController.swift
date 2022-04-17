@@ -95,11 +95,12 @@ extension HomeViewController: SortFilterViewDelegate {
 
 extension HomeViewController: MultiSelectionVCDelegate {
     func filterProductsWithSelected(items: [String]) {
+        categoryView.reloadSelectedTabWith(index: 0)
         verticalTray.filterTrayWithCategories(list: items)
     }
     
     func sortProductWithSelected(item: String) {
+        categoryView.reloadSelectedTabWith(index: 0)
         verticalTray.sortProductWithSelected(item: item)
     }
-    
 }
