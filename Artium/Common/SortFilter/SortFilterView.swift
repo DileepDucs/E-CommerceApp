@@ -7,12 +7,18 @@
 
 import UIKit
 
+protocol SortFilterViewDelegate {
+    func didSelectSort()
+    func didSelectfilter()
+}
+
 @IBDesignable
 class SortFilterView: UIView {
     
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var filterButton: UIButton!
     @IBOutlet weak var sortButton: UIButton!
+    var delegate: SortFilterViewDelegate?
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -32,9 +38,11 @@ class SortFilterView: UIView {
     }
     
     @IBAction func sortButtonTapped(_ sender: UIButton) {
+        delegate?.didSelectSort()
     }
     
     @IBAction func filterButtonTapped(_ sender: UIButton) {
+        delegate?.didSelectfilter()
     }
     
 }

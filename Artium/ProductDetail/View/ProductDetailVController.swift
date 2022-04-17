@@ -55,6 +55,7 @@ extension ProductDetailVController: ProductDetailModelDelegate {
     func failedToLoadProductDetail(error: NetworkError) {
         DispatchQueue.main.async {
             ActivityIndicator.stop()
+            SnackbarView.shared.showAlert(message: error.localizedDescription, alertType: .hideAction, to: self)
         }
     }
     

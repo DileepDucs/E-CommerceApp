@@ -19,3 +19,22 @@ class Utility {
         return UIScreen.main.bounds.height
     }
 }
+
+public extension UIDevice {
+
+    class var isPhone: Bool {
+        return UIDevice.current.userInterfaceIdiom == .phone
+    }
+
+    class var isPad: Bool {
+        return UIDevice.current.userInterfaceIdiom == .pad
+    }
+
+    class var isTV: Bool {
+        return UIDevice.current.userInterfaceIdiom == .tv
+    }
+
+    class var isCarPlay: Bool {
+        return UIDevice.current.userInterfaceIdiom == .carPlay
+    }
+}

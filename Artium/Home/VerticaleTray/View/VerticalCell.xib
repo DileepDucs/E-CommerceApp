@@ -21,10 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="172" height="286"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yIV-Dw-kCb">
-                                <rect key="frame" x="0.0" y="6" width="172" height="204.5"/>
+                                <rect key="frame" x="0.0" y="6" width="172" height="200"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yM7-Na-I7y" customClass="RatingView" customModule="Artium" customModuleProvider="target">
-                                <rect key="frame" x="90" y="180.5" width="72" height="22"/>
+                                <rect key="frame" x="90" y="176" width="72" height="22"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="J5k-p1-qAH"/>
@@ -32,23 +32,23 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nSk-yR-a4t">
-                                <rect key="frame" x="0.0" y="214.5" width="172" height="71.5"/>
+                                <rect key="frame" x="0.0" y="210" width="172" height="76"/>
                                 <color key="backgroundColor" red="0.94117647410000005" green="0.94117653369999998" blue="0.94117659330000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZy-qO-xh4">
-                                <rect key="frame" x="10" y="219.5" width="154" height="15.5"/>
+                                <rect key="frame" x="10" y="215" width="154" height="15.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                                 <color key="textColor" red="0.22381302710000001" green="0.22679436210000001" blue="0.26274967189999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aym-OH-AFM">
-                                <rect key="frame" x="10" y="238" width="154" height="14"/>
+                                <rect key="frame" x="10" y="233.5" width="154" height="14"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufi-Cg-7Qg">
-                                <rect key="frame" x="10" y="255" width="31.5" height="14"/>
+                                <rect key="frame" x="10" y="250.5" width="31.5" height="14"/>
                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="12"/>
                                 <color key="textColor" red="0.093669511377811432" green="0.56220537424087524" blue="0.14248323440551758" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -70,7 +70,7 @@
                             <constraint firstItem="nSk-yR-a4t" firstAttribute="top" secondItem="yIV-Dw-kCb" secondAttribute="bottom" constant="4" id="nza-56-GlB"/>
                             <constraint firstItem="aym-OH-AFM" firstAttribute="leading" secondItem="NZy-qO-xh4" secondAttribute="leading" id="qBQ-R2-fx3"/>
                             <constraint firstItem="ufi-Cg-7Qg" firstAttribute="leading" secondItem="aym-OH-AFM" secondAttribute="leading" id="rMJ-6w-eIG"/>
-                            <constraint firstItem="yIV-Dw-kCb" firstAttribute="height" secondItem="sKU-py-Dud" secondAttribute="height" multiplier="1:1.4" id="taE-ny-BZy"/>
+                            <constraint firstItem="yIV-Dw-kCb" firstAttribute="height" secondItem="sKU-py-Dud" secondAttribute="height" multiplier="1:1.43" id="taE-ny-BZy"/>
                             <constraint firstAttribute="trailing" secondItem="NZy-qO-xh4" secondAttribute="trailing" constant="8" id="tvw-at-BG4"/>
                             <constraint firstAttribute="trailing" secondItem="nSk-yR-a4t" secondAttribute="trailing" id="uQc-Z4-KB9"/>
                             <constraint firstItem="aym-OH-AFM" firstAttribute="trailing" secondItem="NZy-qO-xh4" secondAttribute="trailing" id="vU6-pC-2d0"/>
