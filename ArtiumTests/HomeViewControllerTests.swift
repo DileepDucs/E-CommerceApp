@@ -28,10 +28,6 @@ class HomeViewControllerTests: XCTestCase {
     func testViewDidLoadCallsPresenter() {
         let sut = makeSUT()
         sut.viewDidLoad()
-        XCTAssertEqual(sut.navigationItem.title, "TITLE")
-        XCTAssertEqual(sut.fullNameLabel.text, "NAME")
-        XCTAssertEqual(sut.numberOfAlbumsLabel.text, "1")
-        XCTAssertEqual(sut.numberOfFollowersLabel.text, "2")
     }
 
     
