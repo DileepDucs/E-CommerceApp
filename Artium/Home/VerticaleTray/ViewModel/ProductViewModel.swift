@@ -59,6 +59,14 @@ class ProductViewModel {
         }
     }
     
+    func searchProductWith(text: String) {
+        if text.isEmpty {
+            filteredItems = productItems
+        } else {
+            filteredItems = productItems.filter({$0.category?.caseInsensitiveCompare(text) == .orderedSame || $0.title?.caseInsensitiveCompare(text) == .orderedSame })
+        }
+    }
+    
     func sortProductWithSelected(item: String) {
         filteredItems = productItems
         let value = Sort(rawValue: item)

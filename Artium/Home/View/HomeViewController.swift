@@ -24,11 +24,7 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = false
-    }
-    
-    override var shouldAutorotate: Bool {
-        false
+        navigationController?.isNavigationBarHidden = true
     }
     
     private func setupSearchBar() {
@@ -52,7 +48,20 @@ extension HomeViewController: UISearchBarDelegate {
     // This function get called on search button clicked in keyboards and call API to fetch the results.
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text else { return }
+        categoryView.reloadSelectedTabWith(index: 0)
+        verticalTray.searchProductWith(text: text)
         searchBar.endEditing(true)
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText.isEmpty{
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else{ return }
+                self.categoryView.reloadSelectedTabWith(index: 0)
+                self.verticalTray.searchProductWith(text: "")
+                self.searchBar.resignFirstResponder()
+            }
+        }
     }
 }
 

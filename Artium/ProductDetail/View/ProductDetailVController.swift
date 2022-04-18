@@ -30,6 +30,11 @@ class ProductDetailVController: UIViewController {
         viewModel.getProductDetailWith(productId: productId)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     private func loadProductView(detail: Product) {
         productImageView.sd_setImage(with: URL(string: detail.image ?? ""))
         DispatchQueue.main.async {

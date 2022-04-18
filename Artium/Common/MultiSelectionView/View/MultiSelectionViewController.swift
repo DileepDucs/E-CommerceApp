@@ -46,6 +46,11 @@ class MultiSelectionViewController: UIViewController, UITableViewDataSource, UIT
         tableView.setEditing(true, animated: true)
         self.navigationItem.rightBarButtonItem!.title = "Done"
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

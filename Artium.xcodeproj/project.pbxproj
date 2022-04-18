@@ -15,6 +15,7 @@
 		F02B2701280AE6FB00FA6BEC /* FilterManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B2700280AE6FB00FA6BEC /* FilterManager.swift */; };
 		F02B2704280B28BB00FA6BEC /* SortFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F02B2703280B28BB00FA6BEC /* SortFilterView.swift */; };
 		F02B2706280B292000FA6BEC /* SortFilterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F02B2705280B292000FA6BEC /* SortFilterView.xib */; };
+		F04C2840280D221500D75EF1 /* HomeViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04C283F280D221500D75EF1 /* HomeViewControllerTests.swift */; };
 		F05AB9492809EE7600A4B64D /* ProductDetailVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05AB9482809EE7600A4B64D /* ProductDetailVController.swift */; };
 		F05E17CF28093DF000D68843 /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05E17CE28093DF000D68843 /* CategoryView.swift */; };
 		F05E17D128093E7400D68843 /* CategoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F05E17D028093E7400D68843 /* CategoryView.xib */; };
@@ -45,6 +46,7 @@
 		F0A35F682809823F00FC0EF0 /* VerticalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A35F662809823F00FC0EF0 /* VerticalCell.swift */; };
 		F0A35F692809823F00FC0EF0 /* VerticalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0A35F672809823F00FC0EF0 /* VerticalCell.xib */; };
 		F0A35F6C280983D500FC0EF0 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A35F6B280983D500FC0EF0 /* ProductViewModel.swift */; };
+		F0A811B3280CC010001CCECD /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0A811B2280CC010001CCECD /* MockURLProtocol.swift */; };
 		F0D69F46280BED69007E3F4E /* SnackbarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D69F44280BED69007E3F4E /* SnackbarView.swift */; };
 		F0D69F47280BED69007E3F4E /* SnackbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F0D69F45280BED69007E3F4E /* SnackbarView.xib */; };
 		F0D69F49280C3E53007E3F4E /* MultiSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D69F48280C3E53007E3F4E /* MultiSelectionViewController.swift */; };
@@ -72,6 +74,7 @@
 		F02B2700280AE6FB00FA6BEC /* FilterManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterManager.swift; sourceTree = "<group>"; };
 		F02B2703280B28BB00FA6BEC /* SortFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortFilterView.swift; sourceTree = "<group>"; };
 		F02B2705280B292000FA6BEC /* SortFilterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SortFilterView.xib; sourceTree = "<group>"; };
+		F04C283F280D221500D75EF1 /* HomeViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTests.swift; sourceTree = "<group>"; };
 		F05AB9482809EE7600A4B64D /* ProductDetailVController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailVController.swift; sourceTree = "<group>"; };
 		F05E17CE28093DF000D68843 /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		F05E17D028093E7400D68843 /* CategoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryView.xib; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 		F0A35F662809823F00FC0EF0 /* VerticalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalCell.swift; sourceTree = "<group>"; };
 		F0A35F672809823F00FC0EF0 /* VerticalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VerticalCell.xib; sourceTree = "<group>"; };
 		F0A35F6B280983D500FC0EF0 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
+		F0A811B2280CC010001CCECD /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		F0D69F44280BED69007E3F4E /* SnackbarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnackbarView.swift; sourceTree = "<group>"; };
 		F0D69F45280BED69007E3F4E /* SnackbarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SnackbarView.xib; sourceTree = "<group>"; };
 		F0D69F48280C3E53007E3F4E /* MultiSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiSelectionViewController.swift; sourceTree = "<group>"; };
@@ -419,6 +423,8 @@
 			isa = PBXGroup;
 			children = (
 				F0D69F50280CA3BE007E3F4E /* ArtiumTests.swift */,
+				F0A811B2280CC010001CCECD /* MockURLProtocol.swift */,
+				F04C283F280D221500D75EF1 /* HomeViewControllerTests.swift */,
 			);
 			path = ArtiumTests;
 			sourceTree = "<group>";
@@ -612,7 +618,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0A811B3280CC010001CCECD /* MockURLProtocol.swift in Sources */,
 				F0D69F51280CA3BE007E3F4E /* ArtiumTests.swift in Sources */,
+				F04C2840280D221500D75EF1 /* HomeViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

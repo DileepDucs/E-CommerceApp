@@ -88,6 +88,13 @@ class VerticalTray: UIView {
         }
     }
     
+    func searchProductWith(text: String) {
+        viewModel.searchProductWith(text: text)
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+        }
+    }
+    
 }
 
 extension VerticalTray: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
