@@ -18,7 +18,9 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupSearchBar()
         verticalTray.delegate = self
+        verticalTray.viewController = self
         categoryView.delegate = self
+        categoryView.viewController = self
         sortFilterView.delegate = self
     }
     

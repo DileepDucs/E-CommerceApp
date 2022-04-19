@@ -19,6 +19,7 @@ class CategoryView: UIView {
     var categoryViewModel = CategoryViewModel()
     var delegate: CategoryViewDelegate?
     var currentSelected:Int?
+    var viewController: UIViewController!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -109,9 +110,17 @@ extension CategoryView: UICollectionViewDataSource, UICollectionViewDelegateFlow
 extension CategoryView: CategoryViewModelDelegate {
     func loadCategorySuccessfully() {
         reloadSelectedTabWith(index: 0)
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+            ActivityIndicator.stop()
+        }
     }
     
     func failedToLoadCategory(error: NetworkError) {
-    
+        DispatchQueue.main.async {
+            self.collectionView.reloadData()
+            ActivityIndicator.stop()
+            SnackbarView.shared.showAlert(message: error.localizedDescription, alertType: .hideAction, to: self.viewController)
+        }
     }
 }

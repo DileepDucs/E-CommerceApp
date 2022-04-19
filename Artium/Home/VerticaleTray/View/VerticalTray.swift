@@ -18,7 +18,7 @@ class VerticalTray: UIView {
     @IBOutlet weak var collectionView: UICollectionView!
     var viewModel = ProductViewModel()
     var delegate: VerticalTrayDelegate?
-    
+    var viewController: UIViewController!
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -127,6 +127,9 @@ extension VerticalTray: ProductViewModelDelegate {
     }
     
     func failedToLoadProductList(error: NetworkError) {
-        
+        DispatchQueue.main.async {
+            ActivityIndicator.stop()
+            SnackbarView.shared.showAlert(message: error.localizedDescription, alertType: .hideAction, to: self.viewController)
+        }
     }
 }
