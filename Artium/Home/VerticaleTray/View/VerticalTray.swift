@@ -9,6 +9,8 @@ import UIKit
 
 protocol VerticalTrayDelegate {
     func didSelectProductWith(product: Product)
+    func scrollViewWillBeginDragging()
+    func scrollViewDidEndDecelerating()
 }
 
 @IBDesignable
@@ -97,7 +99,7 @@ class VerticalTray: UIView {
     
 }
 
-extension VerticalTray: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension VerticalTray: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel.count
     }
@@ -114,6 +116,16 @@ extension VerticalTray: UICollectionViewDataSource, UICollectionViewDelegateFlow
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let product = viewModel.getProduct(index: indexPath.row)
         delegate?.didSelectProductWith(product: product)
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        print("scrollViewWillBeginDragging")
+        delegate?.scrollViewWillBeginDragging()
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        print("scrollViewDidEndDecelerating")
+        delegate?.scrollViewDidEndDecelerating()
     }
        
 }

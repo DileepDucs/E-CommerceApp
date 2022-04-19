@@ -24,9 +24,19 @@ class HomeViewController: UIViewController {
         sortFilterView.delegate = self
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let frame = sortFilterView.frame
+        sortFilterView.frame = CGRect(x: frame.origin.x, y: frame.origin.y, width: frame.size.width, height: frame.size.height)
+        
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = true
+        DispatchQueue.main.async {
+            self.showSortFilterView()
+        }
     }
     
     private func setupSearchBar() {
@@ -41,6 +51,28 @@ class HomeViewController: UIViewController {
         let detailVC = storyboard.instantiateViewController(withIdentifier: "ProductDetailVController") as! ProductDetailVController
         detailVC.productId = product.id
         self.navigationController?.pushViewController(detailVC, animated: true)
+    }
+    
+    func showSortFilterView() {
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.5,
+               options: UIView.AnimationOptions.curveEaseInOut,
+               animations: {
+            self.sortFilterView.frame.origin.y = Utility.screenHeight - 45
+            },completion: { finished in
+                
+        })
+    }
+    
+    func hideSortFilterView() {
+        UIView.animate(withDuration: 0.5,
+                       delay: 0.5,
+               options: UIView.AnimationOptions.curveEaseInOut,
+               animations: {
+            self.sortFilterView.frame.origin.y = Utility.screenHeight
+            },completion: { finished in
+            
+        })
     }
 }
 
@@ -68,6 +100,14 @@ extension HomeViewController: UISearchBarDelegate {
 }
 
 extension HomeViewController: VerticalTrayDelegate {
+    func scrollViewWillBeginDragging() {
+        hideSortFilterView()
+    }
+    
+    func scrollViewDidEndDecelerating() {
+        showSortFilterView()
+    }
+    
     func didSelectProductWith(product: Product) {
         pushProductDetailsViewController(product: product)
     }
