@@ -9,6 +9,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var categoryView: CategoryView!
     @IBOutlet weak var verticalTray: VerticalTray!
